@@ -1,0 +1,13 @@
+{
+  "name": "Sahil-Patel-Portfolio",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore",
+    "deploy": "gridsome build && gh-pages -d dist -b website",
+  },
+  "dependencies": {
+    "gridsome": "^0.7.0"
+  }
+}

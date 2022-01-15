@@ -3,6 +3,9 @@
 
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
     <Bar />
+    <div class="container">
+      <Hero />
+    </div>
 <!--     <g-image alt="Example image" src="~/favicon.png" width="135" />
 
     <h1>Sahil Patel.</h1>
@@ -32,12 +35,13 @@
 
 <script>
 import Bar from '../components/Bar.vue'
+import Hero from '../components/Hero.vue'
 export default {
   metaInfo: {
     title: 'Hello, world!'
   },
   components:{
-    Bar
+    Bar, Hero
   }
 }
 </script>

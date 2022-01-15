@@ -47,7 +47,7 @@ export default {
   data () {
     return {
     	isopen: false,
-    	showHide: true
+    	showHide: false
     }
   },
   methods:{
@@ -70,6 +70,7 @@ export default {
 body{
 	overflow-x: hidden;
 }
+button:focus {outline:0;}
 
 :root{
 	--green: rgb(100, 255, 218);
@@ -136,6 +137,7 @@ justify-content: space-between;
 
 .toggle{
 	display: none;
+
 }
 
 .menuAnimation{
@@ -162,6 +164,25 @@ justify-content: space-between;
 	.menuitems[data-visible="true"]{
 		transform: translateX(0%);
 	}
+button:focus {outline:0;}
+
+
+
+		.toggle{
+	display: block;
+	position:absolute;
+	background:transparent;
+	border: none;
+	outlline: none;
+	top:2rem;
+	right:2rem;
+	z-index:9999;
+}
+
+
+
+
+
 
 	.wrapper-menu {
   width: 30px;
@@ -171,6 +192,8 @@ justify-content: space-between;
   justify-content: space-between;
   cursor: pointer;
   transition: transform 330ms ease-out;
+  outlline: none;
+  border: none;
 }
 
 .wrapper-menu.open {
@@ -191,6 +214,7 @@ justify-content: space-between;
 .line-menu.start {
   transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
   transform-origin: right;
+
 }
 
 .open .line-menu.start {
@@ -213,15 +237,7 @@ justify-content: space-between;
 
 
 
-	.toggle{
-		display: block;
-	position:absolute;
-	background:transparent;
-	border: none;
-	top:2rem;
-	right:2rem;
-	z-index:9999;
-}
+
 
 	.menuitems{
 		font-size: 16px;

@@ -5,6 +5,7 @@
     <Bar />
     <div class="container">
       <Hero />
+      <About />
     </div>
 <!--     <g-image alt="Example image" src="~/favicon.png" width="135" />
 
@@ -36,16 +37,19 @@
 <script>
 import Bar from '../components/Bar.vue'
 import Hero from '../components/Hero.vue'
+import About from '../components/About.vue'
 export default {
   metaInfo: {
     title: 'Hello, world!'
   },
   components:{
-    Bar, Hero
+    Bar, Hero, About
   }
 }
 </script>
 
 <style>
-
+.areaContainer{
+  max-width: 900px;
+}
 </style>

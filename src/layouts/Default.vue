@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div class="">
   <slot/>  
   </div>
 <!--   <div class="layout">

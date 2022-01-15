@@ -25,7 +25,7 @@
 
 
 	<div class="menu">
-			<ul class="menuitems" id="menuItems" :class="{menuAnimation: showHide}">
+			<ul class="menuitems" id="menuItems" :data-visible="showHide">
 				<li class="singleItem"><span class="numerals">01.</span>About</li>
 				<li class="singleItem"><span class="numerals">02.</span>About</li>
 				<li class="singleItem"><span class="numerals">03.</span>About</li>
@@ -54,11 +54,11 @@ export default {
   	clicked(){
   		if(this.isopen === true){
   			this.isopen = false
-  			this.showHide = true
+  			this.showHide = false
   		}
   		else{
   			this.isopen = true
-  			this.showHide = false
+  			this.showHide = true
   		}
   	}
   }
@@ -154,11 +154,13 @@ justify-content: space-between;
 		align-items:center;
 		justify-content:center;
 		gap: var(--flex-gap, 2rem);
+		transform: translateX(100%);
 		transition: transform 330ms ease-in;
 
 
-
-
+	}
+	.menuitems[data-visible="true"]{
+		transform: translateX(0%);
 	}
 
 	.wrapper-menu {

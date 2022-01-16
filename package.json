@@ -8,6 +8,7 @@
     "deploy": "gridsome build && gh-pages -d dist -b website"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.4.0",
     "gridsome": "^0.7.0"
   }
 }

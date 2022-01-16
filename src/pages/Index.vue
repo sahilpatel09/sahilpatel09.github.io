@@ -1,12 +1,21 @@
 <template>
   <Layout>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
     <Bar />
     <div class="container">
       <Hero />
       <About />
+      <Contact />
     </div>
+
+
+
+
+
+
+
+
 <!--     <g-image alt="Example image" src="~/favicon.png" width="135" />
 
     <h1>Sahil Patel.</h1>
@@ -38,12 +47,14 @@
 import Bar from '../components/Bar.vue'
 import Hero from '../components/Hero.vue'
 import About from '../components/About.vue'
+import Contact from '../components/Contact.vue'
+
 export default {
   metaInfo: {
     title: 'Hello, world!'
   },
   components:{
-    Bar, Hero, About
+    Bar, Hero, About, Contact
   }
 }
 </script>
@@ -52,4 +63,6 @@ export default {
 .areaContainer{
   max-width: 900px;
 }
+
+
 </style>

@@ -42,7 +42,6 @@ body {
 .heroContainer{
 
 	padding: 70px 70px;
-	background: red;
 
 
 

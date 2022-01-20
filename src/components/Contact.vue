@@ -1,5 +1,5 @@
 <template>
-	<div class="cfContainer">
+	<div class="cfContainer" id="getintouch">
 		<center class="col">
 			<p class="smallText">What is next?</p>
 			<h2 class="bigText" >Get In Touch</h2>

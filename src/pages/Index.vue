@@ -6,6 +6,8 @@
     <div class="container">
       <Hero />
       <About />
+      <Featured />
+      <Projects />
       <Contact />
     </div>
 
@@ -47,6 +49,8 @@
 import Bar from '../components/Bar.vue'
 import Hero from '../components/Hero.vue'
 import About from '../components/About.vue'
+import Featured from '../components/Featured.vue'
+import Projects from '../components/Projects.vue'
 import Contact from '../components/Contact.vue'
 
 export default {
@@ -54,7 +58,7 @@ export default {
     title: 'Hello, world!'
   },
   components:{
-    Bar, Hero, About, Contact
+    Bar, Hero, About,Featured, Projects, Contact
   }
 }
 </script>

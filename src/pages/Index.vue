@@ -61,7 +61,7 @@ export default {
 
 <style>
 .areaContainer{
-  max-width: 900px;
+  max-width: 1000px;
 }
 
 

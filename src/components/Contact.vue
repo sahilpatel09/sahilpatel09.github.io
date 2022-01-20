@@ -3,8 +3,10 @@
 		<center class="col">
 			<p class="smallText">What is next?</p>
 			<h2 class="bigText" >Get In Touch</h2>
-			<p class="smallText">{{error}}</p>
-		</center>
+			<p class="desc">Ping me here and I will reply as soon as I see your email. My inbox is open to all, whether you have a question or just wanna say hi! Just ping me. Feel free to ping me about job positions.</p>
+			<div class="loader" v-if="isLoading"></div>
+			<p v-else class="smallText">{{error}}</p>
+		
 		<div class="form">
 			<form @submit.prevent="sendEmail">
 
@@ -19,6 +21,7 @@
 
 			  </form>
 		</div>
+		</center>
 	</div>
 </template>
 
@@ -33,7 +36,7 @@ export default {
     return {
 
     	error: "",
-
+    	isLoading: false,
     	user_name: "",
     	message: "",
     	email: '',
@@ -47,10 +50,12 @@ export default {
 
 
   	sendEmail(){
+  		this.isLoading = true
 
   		emailjs.send(atob(this.s34lkdjfla3jlfdskaj), atob(this.tertlfsdl45lkdfgal3), {email: this.email,name: this.user_name, message: this.message}, atob(this.jenteb342sdfklaj3434l3))
   		        .then((result) => {
   		            console.log('SUCCESS!', result.text);
+  		            this.isLoading = false
   		            this.error = "Message sent successfully."
   		        }, (error) => {
   		            console.log('FAILED...', error);
@@ -67,14 +72,38 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.loader {
+  border: 5px solid slate; /* Light grey */
+  border-top: 9px solid cyan; /* Blue */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 10px 10px;	
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 .smallText{
 	color:cyan;
+}
+.desc{
+	font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+	color: #8892b0;
+	font-size: 20px;
+	font-weight: 400;
+	max-width: 700px;
 }
 .bigText{
 
 font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
 font-size: 60px;
 margin-top:-20px;
+margin-bottom:-10px;
+
 color:#ccd6f6;
 font-style: normal;
 font-variant-caps: normal;
@@ -85,43 +114,53 @@ font-weight: 600;
 
 }
 .cfContainer{
-	width: 90%;
 	padding: 70px 70px;
 
 }
 
 .form{
 	display: flex;
-	flex-direction: column;
 	align-items:center;
 	justify-content:center;
 	padding-top: 0px;
 }
 .input{
 	width: 400px;
-	margin: 10px 40px;
+	height: 100%;
+	margin: 5px auto;
 	background: #303C55;
 	padding: 10px 20px;
-	border-radius: 7px;
+	border-radius: 2px;
 	color: white;
-	outlline: none;
-	border: mone;
+	outlline: 0px;
+	border: 0px;
 }
 
 .input:focus{
-border: 0;
-outlline:0;
+border: 0px;
+outlline:0px;
 }
+
 .button{
 	padding: 10px 40px;
-	border: 1px solid cyan;
 	background: #303C55;
 	color: white;
 	font-family: Calibre;
 	font-size: 20px;
 	border-radius: 7px;
+	border:0px;
+	transform: uppercase;
+	font-family: roboto;
+	font-style: normal;
+	font-weight: 400;
 	margin: 20px 40px;
 }
+.button:hover{
+	background: #ccd6f6;
+	transition: all 333ms ease-out;
+	color: navy;
+}
+
 
 @media (max-width: 48rem){
 
@@ -130,15 +169,24 @@ outlline:0;
 	justify-content:flex-start;
 	padding: 50px 10px;
 }
-
+.desc{
+	font-size: 15px;
+	color:#8892b0;
+}
 .bigText{
 
 font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
 font-size: 40px;
-color:#8892b0;
 font-weight: 600;
 
 }
+
+.input{
+	width: 250px;
+	height: 100%;
+}
+
+
 
 
 

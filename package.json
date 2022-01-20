@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.4.0",
+    "gh-pages": "^3.2.3",
     "gridsome": "^0.7.0"
   }
 }

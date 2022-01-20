@@ -1,11 +1,11 @@
 <template>
-	<div class="aContainer">
+	<div class="col aContainer">
 		<h2 class="title">
 			<span class="numerals">01. </span>About Me
 		</h2>
 		<div class="line"></div>
 			<div class="row">
-		<div class="col-md-8 textContent">
+		<div class="col-md-4 textContent">
 			Hello! I'm Sahil, from Ahmedabad, also known as the Manchester of India.
 			<br />
 
@@ -39,8 +39,8 @@ export default {
 	color:cyan;
 }
 .aContainer{
-	width: 90%;
 	padding: 70px 70px;
+	
 
 }
 .line{

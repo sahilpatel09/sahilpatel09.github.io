@@ -4,12 +4,18 @@
 			<h2 class="mainTitle">Noteworthy Projects</h2>
 			<p class="smallText">View all the projects</p>
 		</div>
+		
 		<div class="tiles">
+			
 			<div class="tile">
 				<div class="icons">
-					<img class="flex-start" src="/folder.svg" />
-					<img class="flex-end"src="/github.svg" />
-					<img class="flex-end" src="/link.svg" />
+					<div class="folder">
+						<img class="flex-start" src="/folder.svg" />						
+					</div>
+					<div class="outbound_links">
+						<img class="flex-end"src="/github.svg" />
+						<img class="flex-end" src="/link.svg" />						
+					</div>
 
 				</div>
 				<div class="tileText">
@@ -19,17 +25,21 @@
 					The app has been so good and doing all the important things on the scale of the best of the sessions.
 				</div>
 				<div class="tilepills">
-					<p class="pile">HTML</p>
-					<p class="pile">CSS</p>
-					<p class="pile">Photoshop</p>
+					<p class="pill">HTML</p>
+					<p class="pill">CSS</p>
+					<p class="pill">Photoshop</p>
 				</div>
 			</div>
 
 			<div class="tile">
 				<div class="icons">
-					<img class="flex-start" src="/folder.svg" />
-					<img class="flex-end"src="/github.svg" />
-					<img class="flex-end" src="/link.svg" />
+					<div class="folder">
+						<img class="flex-start" src="/folder.svg" />						
+					</div>
+					<div class="outbound_links">
+						<img class="flex-end"src="/github.svg" />
+						<img class="flex-end" src="/link.svg" />						
+					</div>
 
 				</div>
 				<div class="tileText">
@@ -39,18 +49,51 @@
 					The app has been so good and doing all the important things on the scale of the best of the sessions.
 				</div>
 				<div class="tilepills">
-					<p class="pile">HTML</p>
-					<p class="pile">CSS</p>
-					<p class="pile">Photoshop</p>
+					<p class="pill">HTML</p>
+					<p class="pill">CSS</p>
+					<p class="pill">Photoshop</p>
 				</div>
 			</div>
 
 
+
 			<div class="tile">
 				<div class="icons">
-					<img class="flex-start" src="/folder.svg" />
-					<img class="flex-end"src="/github.svg" />
-					<img class="flex-end" src="/link.svg" />
+					<div class="folder">
+						<img class="flex-start" src="/folder.svg" />						
+					</div>
+					<div class="outbound_links">
+						<img class="flex-end"src="/github.svg" />
+						<img class="flex-end" src="/link.svg" />						
+					</div>
+
+				</div>
+				<div class="tileText">
+					Voter Registraion App
+				</div>
+				<div class="tiledesc">
+					The app has been so good and doing all the important things on the scale of the best of the sessions.
+					The app has been so good and doing all the important things on the scale of the best of the sessions.
+				</div>
+				<div class="tilepills">
+					<p class="pill">HTML</p>
+					<p class="pill">CSS</p>
+					<p class="pill">Photoshop</p>
+				</div>
+			</div>
+
+
+
+
+			<div class="tile">
+				<div class="icons">
+					<div class="folder">
+						<img class="flex-start" src="/folder.svg" />						
+					</div>
+					<div class="outbound_links">
+						<img class="flex-end"src="/github.svg" />
+						<img class="flex-end" src="/link.svg" />						
+					</div>
 
 				</div>
 				<div class="tileText">
@@ -60,16 +103,70 @@
 					The app has been so good and doing all the important things on the scale of the best of the sessions.
 				</div>
 				<div class="tilepills">
-					<p class="pile">HTML</p>
-					<p class="pile">CSS</p>
-					<p class="pile">Photoshop</p>
+					<p class="pill">HTML</p>
+					<p class="pill">CSS</p>
+					<p class="pill">Photoshop</p>
 				</div>
 			</div>
 
+
+			<div class="tile">
+				<div class="icons">
+					<div class="folder">
+						<img class="flex-start" src="/folder.svg" />						
+					</div>
+					<div class="outbound_links">
+						<img class="flex-end"src="/github.svg" />
+						<img class="flex-end" src="/link.svg" />						
+					</div>
+
+				</div>
+				<div class="tileText">
+					Voter Registraion App
+				</div>
+				<div class="tiledesc">
+					The app has been so good and doing all the important things on the scale of the best of the sessions.
+				</div>
+				<div class="tilepills">
+					<p class="pill">HTML</p>
+					<p class="pill">CSS</p>
+					<p class="pill">Photoshop</p>
+				</div>
+			</div>
+
+
+
+			<div class="tile">
+				<div class="icons">
+					<div class="folder">
+						<img class="flex-start" src="/folder.svg" />						
+					</div>
+					<div class="outbound_links">
+						<img class="flex-end"src="/github.svg" />
+						<img class="flex-end" src="/link.svg" />						
+					</div>
+
+				</div>
+				<div class="tileText">
+					Voter Registraion App
+				</div>
+				<div class="tiledesc">
+					The app has been so good and doing all the important things on the scale of the best of the sessions.
+				</div>
+				<div class="tilepills">
+					<p class="pill">HTML</p>
+					<p class="pill">CSS</p>
+					<p class="pill">Photoshop</p>
+				</div>
+			</div>
+
+
+					
 
 
 
 		</div>
+
 	</div>
 </template>
 
@@ -88,15 +185,21 @@ export default {
 
 <style lang="css" scoped>
 
+.projectContainer{
+padding: 70px 70px;
+}
+
 .mainTitle {
 	color: white;
 	font-size: 45px;
 font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
 }
+
 .smallText {
 	color:cyan;
 	margin-top:-25px;
 }
+
 .title{
 	display: flex;
 	flex-direction:column;
@@ -105,32 +208,56 @@ font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, 
 	padding:10px;
 }
 
-.projectContainer{
-padding: 70px 70px;
-background:red;
-}
+
 
 .tiles{
-	display:flex;
-	flex-wrap:wrap;
+	display: grid;
+  grid-template-columns: repeat(auto-fit, 342px);
+  justify-content: center;
+
 
 }
 
 .tile{
-	background:black;
-	padding: 10px 20px;
+	background: #172a45;
+	padding: 30px 30px;
+	margin: 3px 3px;
 }
+
 .icons{
-	display:flex;
-	background:orange;
-}
-.flex-start{
-	justify-content:flex-start;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
-.flex-end{
-	justify-content:flex-end;
+.folder img {
+	margin: 0px;
+}
+.outbound_links img {
+	margin:5px;
 }
 
+.tileText{
+	color: #ccd6f6;
+	margin-top: 25px;
+	font-size: 18px;
+	font-weight: bolder;
 
+}
+.tiledesc{
+	color: white;
+	font-size: 14px;
+	margin-top:10px;
+}
+
+.tilepills{
+	color: cyan;
+	display: flex;
+	flex-direction: row;
+	margin-top: 10px;
+}
+.pill{
+	margin: 2.5px;
+	font-size: 14px;
+}
 </style>

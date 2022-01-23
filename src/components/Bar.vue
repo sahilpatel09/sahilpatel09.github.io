@@ -27,9 +27,9 @@
 	<div class="menu">
 			<ul class="menuitems" id="menuItems" :data-visible="showHide">
 				<li class="singleItem"><span class="numerals">01.</span>About</li>
-				<li class="singleItem"><span class="numerals">02.</span>About</li>
-				<li class="singleItem"><span class="numerals">03.</span>About</li>
-				<li class="singleItem"><span class="numerals">04.</span>About</li>
+				<li class="singleItem"><span class="numerals">02.</span>Experience</li>
+				<li class="singleItem"><span class="numerals">03.</span>Projects</li>
+				<li class="singleItem"><span class="numerals">04.</span>Contact</li>
 
 				<li class="specialButton">Resume</li>
 
@@ -103,6 +103,7 @@ justify-content: space-between;
 .menu{
 	list-style-type: none;
 
+
 }
 .menuitems{
 		font-size:14px;
@@ -145,10 +146,20 @@ justify-content: space-between;
 }
 
 @media (max-width: 48rem){
+
+
+	.toggle {
+		position: fixed;
+		margin: 0;
+		padding:0;
+
+	}
 	.menuitems{
 		position: fixed;
-		inset:0 0 0 50%;
+		inset:0 0 0 30%;
 		margin:0;
+		padding:0;
+		height: 100vh;
 		z-index:1000;
 		background:#172a45;
 		display:flex;

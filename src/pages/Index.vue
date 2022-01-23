@@ -1,9 +1,9 @@
 <template>
   <Layout>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
     <Bar />
-    <div class="container">
+    <div class="areaContainer">
       <Hero />
       <About />
       <Featured />
@@ -65,7 +65,7 @@ export default {
 
 <style>
 .areaContainer{
-  max-width: 1000px;
+
 }
 
 

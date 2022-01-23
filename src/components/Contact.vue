@@ -22,6 +22,12 @@
 			  </form>
 		</div>
 		</center>
+	<center>
+	<div class="footerCopyright">
+		<p>Inspired By <span><a href="https://github.com/bchiang7/v4" title="Profile Link of Brittany Chiang">Brittany Chiang</a></span><br />Re-Developed with Vue js & Gridsome by <span><a href="https://github.com/sahilpatel09" title="Github Profile of Sahil Patel">Sahil Patel</a></span></p>
+	</div>	
+	</center>
+	
 	</div>
 </template>
 
@@ -72,6 +78,22 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+.footerCopyright{
+	margin-bottom: -20px;
+	font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
+	vertical-align:baseline;
+	font-size: 12px;
+	color: #8892b0;
+	line-height:
+16px;
+}
+
+.footerCopyright span a {
+	text-decoration: none;
+	color: cyan;
+}
+
 .loader {
   border: 5px solid slate; /* Light grey */
   border-top: 9px solid cyan; /* Blue */

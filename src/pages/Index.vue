@@ -55,7 +55,8 @@ import Contact from '../components/Contact.vue'
 
 export default {
   metaInfo: {
-    title: 'Hello, world!'
+    title: 'Sahil Patel, Frontend Developer',
+    descriptio: "My name is Sahil and I do most of my work with Vue js."
   },
   components:{
     Bar, Hero, About,Featured, Projects, Contact

@@ -8,5 +8,15 @@ module.exports = {
   siteName: 'Gridsome',
   plugins: [{
     use: 'gridsome-plugin-seo'
-  }]
+  },
+
+  {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/projects/**/*.md',
+        typeName: 'Projects',
+        }
+      }
+    },
+  ],
 }

@@ -1,5 +1,5 @@
 <template>
-	<div class="col aContainer">
+	<div class="col aContainer" id="about">
 		<h2 class="title">
 			<span class="numerals">01. </span>About Me
 		</h2>
@@ -111,6 +111,7 @@ export default {
 .row{
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
 
 }
 .textContent{

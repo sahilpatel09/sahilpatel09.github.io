@@ -26,10 +26,10 @@
 
 	<div class="menu">
 			<ul class="menuitems" id="menuItems" :data-visible="showHide">
-				<li class="singleItem"><span class="numerals">01.</span>About</li>
+				<li class="singleItem"><span class="numerals">01.</span><a href="#about" title="About me">About</a></li>
 				<li class="singleItem"><span class="numerals">02.</span>Experience</li>
-				<li class="singleItem"><span class="numerals">03.</span>Projects</li>
-				<li class="singleItem"><span class="numerals">04.</span>Contact</li>
+				<li class="singleItem"><span class="numerals">03.</span><a href="#projects" title="My Projects">Projects</a></li>
+				<li class="singleItem"><span class="numerals">04.</span><a href="#getintouch" title="Contact me">Contact</a></li>
 
 				<li class="specialButton">Resume</li>
 
@@ -105,6 +105,7 @@ justify-content: space-between;
 
 
 }
+
 .menuitems{
 		font-size:14px;
 		font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", "Lucida Console", Monaco, monospace;
@@ -113,6 +114,15 @@ justify-content: space-between;
 		gap: var(--flex-gap, 2rem);
 		color:#8892b0;
 		
+}
+.menu ul li a {
+	text-decoration: none;
+	color: #8892b0;
+}
+.menu ul li a:hover {
+	color: cyan;
+	transition: all 333ms ease-in;
+
 }
 
 .numerals{

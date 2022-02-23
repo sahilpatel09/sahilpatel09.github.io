@@ -1,19 +1,15 @@
 <template>
-	<h1></h1>
+  <h1></h1>
 </template>
 
 <script>
 export default {
+  name: "Featured",
 
-  name: 'Featured',
-
-  data () {
-    return {
-
-    }
-  }
-}
+  data() {
+    return {};
+  },
+};
 </script>
 
-<style lang="css" scoped>
-</style>
+<style lang="css" scoped></style>

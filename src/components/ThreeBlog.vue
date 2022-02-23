@@ -1,11 +1,11 @@
 <template>
-	<div class="projectContainer" id="projects">
+	<div id="projects">
 		<div class="title">
 			<h2 class="mainTitle">My Recent Writings</h2>
 			<p class="smallText">Checkout my daily thoughts and views on projects building</p>
 		</div>
 		
-			<div class="flexbox">
+<!-- 			<div class="flexbox">
 			        <ul class="flex-card-list">
 			          <li class="flex-card-listitem" v-for="post in $static.posts.edges" :key="post.id">
 			            <div class="flex-card">
@@ -17,13 +17,15 @@
 			                	<g-link :to="post.node.path" rel="bookmark">{{ post.node.title }}</g-link>
 			                </h3>
 			                <p>{{post.node.summary}}</p>
-			                <!-- <a href="#" class="flex-card-button">Read More</a> -->
+			                <a href="#" class="flex-card-button">Read More</a>
 			              </div>
 			            </div>
 			          </li>
 			     
 			        </ul>
-			      </div>
+			      </div> -->
+
+
 
 
 
@@ -37,6 +39,26 @@
 			  </article>
 
  -->			  
+            <div class="row">
+              <div class="col-md-4 tile" v-for="post in $static.posts.edges" :key="post.id">
+                
+                <div class="row">
+                  <img :src="post.node.image" width="100%" height="180px" />
+                </div>
+
+                <div class="tileText">
+                  <g-link :to="post.node.path" rel="bookmark" class="tileTextStyle">{{ post.node.title }}</g-link>
+                </div>
+                <div class="tiledesc">
+                  {{ post.node.summary }}
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+
 
 
 
@@ -45,7 +67,7 @@
 
 <static-query>
 query Posts ($page: Int) {
-  posts: allPost (sortBy: "date", order: DESC, perPage: 10, page: $page) @paginate {
+  posts: allPost (sortBy: "date", order: DESC,limit:3, perPage: 10, page: $page) @paginate {
     totalCount
     pageInfo {
       totalPages
@@ -107,71 +129,34 @@ font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, 
 
 
 
-
-
-
-
-
-
-.tileText{
-	color: #ccd6f6;
-	margin-top: 25px;
-	font-size: 18px;
-	font-weight: bolder;
-
-}
-.tiledesc{
-	color: white;
-	font-size: 14px;
-	margin-top:10px;
+.tile {
+  background: #172a45;
+  margin: 5px 5px;
+  padding-bottom:20px;
 }
 
 
-ul
-  {
-    list-style-type: none;
-    padding: 0; 
-  }
-  .flexbox .flex-card-list {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content: center;
-  }
-  .flexbox .flex-card-listitem {
-    display:flex;
-    background-color: #233554;
-    padding: 1em;
-    border-radius: 10px;
-  }
-  
-  .flexbox .flex-card {
-    display:flex;
-    flex-direction:column;
-  }
-  .flex-card-list li {
-    width:400px;
-    margin: .55em;
-  }
-  .flexbox .flex-card-content {
-    
-  }
-  .flexbox .flex-card-content p {
-    font-weight: 600;
-    font-family: Calibre, serif;
-    color:ghostwhite;
-  }
-  
-  .flex-card-image img{
-      width:400Px;
-      height:250px;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-  .flex-card-heading{
-      padding:5px;
-      width:100%;
-      color:cyan important!;
-  }  
+.tileText {
+  color: cyan;
+  margin-top: 25px;
+  font-size: 18px;
+  font-weight: bolder;
+  padding: 0px 20px;
+  text-decoration: none;
+}
+
+.tileTextStyle{
+  color: cyan;
+}
+
+
+.tiledesc {
+  color: white;
+  font-size: 14px;
+  margin-top: 10px;
+  padding: 0px 20px;
+}
+
 
 
 </style>

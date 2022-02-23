@@ -1,8 +1,8 @@
 <template>
   <div class="">
-  <slot/>  
+    <slot />
   </div>
-<!--   <div class="layout">
+  <!--   <div class="layout">
     <header class="header">
       <strong>
         <g-link to="/">{{ $static.metadata.siteName }}</g-link>
@@ -13,7 +13,6 @@
       </nav>
     </header>
   </div> -->
-  
 </template>
 
 <static-query>
@@ -26,12 +25,11 @@ query {
 
 <style>
 body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  padding:30px;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  padding: 30px;
   margin: 0;
-/*  line-height: 1.5;*/
+  /*  line-height: 1.5;*/
   background-color: #0a192f;
 }
-
-
 </style>

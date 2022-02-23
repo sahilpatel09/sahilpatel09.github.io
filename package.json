@@ -5,7 +5,8 @@
     "build": "gridsome build",
     "develop": "gridsome develop",
     "explore": "gridsome explore",
-    "deploy": "gridsome build && gh-pages -d dist -b website"
+    "deploy": "gridsome build && gh-pages -d dist -b website",
+    "format": "yarn prettier --write ."
   },
   "dependencies": {
     "@emailjs/browser": "^3.4.0",
@@ -14,5 +15,8 @@
     "gh-pages": "^3.2.3",
     "gridsome": "^0.7.0",
     "gridsome-plugin-seo": "^1.0.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1"
   }
 }

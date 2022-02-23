@@ -1,25 +1,22 @@
 <template>
-	<div>
-		<p>The website is still under construction.</p>
-	</div>
+  <div>
+    <p>The website is still under construction.</p>
+  </div>
 </template>
 
 <script>
 export default {
+  name: "Maintenance",
 
-  name: 'Maintenance',
-
-  data () {
-    return {
-
-    }
-  }
-}
+  data() {
+    return {};
+  },
+};
 </script>
 
 <style lang="css" scoped>
 p {
-	text-align: center;
-	color: white;
+  text-align: center;
+  color: white;
 }
 </style>

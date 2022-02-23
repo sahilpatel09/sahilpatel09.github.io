@@ -10,15 +10,13 @@
 			          <li class="flex-card-listitem" v-for="post in $static.posts.edges" :key="post.id">
 			            <div class="flex-card">
 			              <div class="flex-card-image">
-			                <!-- <img src="https://cdn.pixabay.com/photo/2017/04/16/19/18/mug-2235591__340.png" /> -->
-			                <g-image
-			                        :src="post.node.image"
-			                      />
-
+			                <img :src="post.node.image" />
 			              </div>
 			              <div class="flex-card-content">
-			                <h3 class="flex-card-heading">{{post.node.title}}</h3>
-			                <p>{{post.node}}</p>
+			                <h3 class="flex-card-heading">
+			                	<g-link :to="post.node.path" rel="bookmark">{{ post.node.title }}</g-link>
+			                </h3>
+			                <p>{{post.node.summary}}</p>
 			                <!-- <a href="#" class="flex-card-button">Read More</a> -->
 			              </div>
 			            </div>
@@ -27,34 +25,6 @@
 			        </ul>
 			      </div>
 
-
-
-		<div class="tiles">
-			
-
-
-
-			
-<!-- <div v-for="post in $static.posts.edges" :key="post.id">
-
-				<div class="tileText">
-					{{post.node.title}}
-				</div>
-				<div class="tiledesc">
-				How are you all
-				</div>
-				
-			</div>
-		</div> -->
-
-
-
-
-					
-
-
-
-		</div>
 
 
 
@@ -200,7 +170,7 @@ ul
   .flex-card-heading{
       padding:5px;
       width:100%;
-      color:cyan;
+      color:cyan important!;
   }  
 
 

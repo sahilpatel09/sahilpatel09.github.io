@@ -8,6 +8,7 @@
       <About />
       <Featured />
       <Projects />
+      <BlogSection />
       <Contact />
     </div>
 
@@ -51,6 +52,8 @@ import Hero from '../components/Hero.vue'
 import About from '../components/About.vue'
 import Featured from '../components/Featured.vue'
 import Projects from '../components/Projects.vue'
+import BlogSection from '../components/ThreeBlog.vue'
+
 import Contact from '../components/Contact.vue'
 
 export default {
@@ -59,7 +62,7 @@ export default {
     description: "My name is Sahil and I do most of my work with Vue js."
   },
   components:{
-    Bar, Hero, About,Featured, Projects, Contact
+    Bar, Hero, About,Featured, Projects, BlogSection, Contact
   }
 }
 </script>

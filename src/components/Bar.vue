@@ -81,19 +81,24 @@ export default {
       showHide: false,
     };
   },
+  computed: {
+    getScreenWidth(){
+      return window.screen.width;
+    }
+  },
   methods: {
     clicked() {
       if (this.isopen === true) {
         this.isopen = false;
         this.showHide = false;
-        if(window.screen.width < 769){
+        if(getScreenWidth() < 769){
           document.body.classList.remove('fixedBody');
         }
 
       } else {
         this.isopen = true;
         this.showHide = true;
-        if(window.screen.width < 769){
+        if(getScreenWidth() < 769){
           document.body.classList.add('fixedBody');
         }
 

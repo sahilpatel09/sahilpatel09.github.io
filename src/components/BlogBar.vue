@@ -68,17 +68,23 @@ export default {
     return {
       isopen: false,
       showHide: false,
+      resolution: {
+        width: null,
+        height: null
+      }
     };
   },
-  created() {
-  	console.log(window.screen.width,window.screen.height)
+  computed: {
+    getScreenWidth(){
+      return window.screen.width;
+    }
   },
   methods: {
     clicked() {
       if (this.isopen === true) {
         this.isopen = false;
         this.showHide = false;
-        if(window.screen.width < 769){
+        if(getScreenWidth() < 769){
         	document.body.classList.remove('fixedBody');
         }
 
@@ -86,7 +92,7 @@ export default {
       } else {
         this.isopen = true;
         this.showHide = true;
-        if(window.screen.width < 769){
+        if(getScreenWidth() < 769){
         	document.body.classList.add('fixedBody');
         }
 

@@ -87,7 +87,7 @@ export default {
     }
   },
   created() {
-    console.log("App initiated with screen size ",window.screen.width);
+    
   },
   methods: {
     clicked() {

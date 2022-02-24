@@ -46,23 +46,12 @@
       <div class="menu">
         <ul class="menuitems" id="menuItems" :data-visible="showHide">
           <li class="singleItem">
-            <span class="numerals">01.</span
-            ><a href="#about" title="About me" @click="clicked">About</a>
+            <span class="numerals">I.</span
+            ><g-link to="/" title="About me" @click="clicked">Portfolio</g-link>
           </li>
           <li class="singleItem">
-            <span class="numerals">02.</span>Experience
-          </li>
-          <li class="singleItem">
-            <span class="numerals">03.</span
-            ><a href="#projects" title="My Projects" @click="clicked">Projects</a>
-          </li>
-          <li class="singleItem">
-            <span class="numerals">04.</span
-            ><a href="/blog" title="Blog" @click="clicked">Blog</a>
-          </li>
-          <li class="singleItem">
-            <span class="numerals">05.</span
-            ><a href="#getintouch" title="Contact me" @click="clicked">Contact</a>
+            <span class="numerals">II.</span
+            ><g-link to="/#getintouch" title="Contact" @click="clicked">Contact</g-link>
           </li>
 
           <li class="specialButton">Resume</li>
@@ -73,7 +62,7 @@
 
 <script>
 export default {
-  name: "Bar",
+  name: "BlogBar",
 
   data() {
     return {
@@ -81,20 +70,24 @@ export default {
       showHide: false,
     };
   },
+  created() {
+  	console.log(window.screen.width,window.screen.height)
+  },
   methods: {
     clicked() {
       if (this.isopen === true) {
         this.isopen = false;
         this.showHide = false;
         if(window.screen.width < 769){
-          document.body.classList.remove('fixedBody');
+        	document.body.classList.remove('fixedBody');
         }
+
 
       } else {
         this.isopen = true;
         this.showHide = true;
         if(window.screen.width < 769){
-          document.body.classList.add('fixedBody');
+        	document.body.classList.add('fixedBody');
         }
 
       }

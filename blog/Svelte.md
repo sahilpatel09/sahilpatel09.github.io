@@ -1,10 +1,10 @@
 ---
-title: "A hello world example in Gridsome 2"
-path: /gridsome-markdown-blog
-date: 2020-10-24
-summary: "Read my guide to setting up Gridsome and how Vue can help greatly."
-image: "https://peerbits-wpengine.netdna-ssl.com/wp-content/uploads/2018/05/Vue.js-cta-main.jpg"
-tags: ['Vue.js' ]
+title: "What is Sveltve?"
+path: /svelte
+date: 2022-02-23
+summary: "Read my guide to setting up Gridsome"
+image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSa5PmKO4lKafWgYC_vCvd4o3sa7U1XM-moRGaEb1Ww_G0yMaSWyaxN6cc3OnldtX9AuY&usqp=CAU"
+tags: ['Svelte' ]
 ---
 
 ## Hello world!

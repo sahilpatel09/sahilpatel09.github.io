@@ -2,7 +2,7 @@
   <Layout>
     <div class="container">
       <Bar />
-      <div class="container">
+      <div>
         <Hero />
         <About />
         <Featured />
@@ -44,6 +44,7 @@ export default {
 </script>
 
 <style>
+
 html {
   scroll-behavior: smooth;
 }

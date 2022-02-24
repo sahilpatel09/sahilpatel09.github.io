@@ -1,5 +1,11 @@
 <template>
-  <div>
+  <div class="container">
+    <BlogMenu />
+
+
+
+
+
     <article v-for="post in $page.posts.edges" :key="post.id">
       <h2>
         <g-link :to="post.node.path" rel="bookmark">{{
@@ -41,10 +47,11 @@ query Posts ($page: Int) {
 
 <script>
 import { Pager } from "gridsome";
-
+import BlogMenu from "~/components/BlogBar.vue";
 export default {
   components: {
     Pager,
+    BlogMenu
   },
   metaInfo: {
     title: "View my blog posts",

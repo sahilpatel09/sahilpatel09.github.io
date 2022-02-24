@@ -77,21 +77,26 @@ export default {
 </script>
 
 <style>
-  code {
-  font-family: Consolas,"courier new";
-  color: green;
-  background-color: #f1f1f1;
-  padding: 2px;
-  font-size: 105%;
-}
+
+  
   .backLink{
-    color: cyan;
+    color: var(--green);
+    text-decoration: none;
+
   }
 
   .postTitle {
     font-size: 40px;
-    color: cyan;
+    color: var(--light-slate);
+    font-family: var(--font-mono);
   }
+
+  [data-lang]::before {
+  content: attr(data-lang);
+  display: block;
+  text-align: right;
+}
+
 
   .line {
       border: 1px solid rgba(255, 255, 255, 0.16);
@@ -104,26 +109,8 @@ export default {
     color: cyan;
   }
 
-  .markdown-body {
-    color: #a8b2d1;
-    font-size: 18px;
-  }
 
-  h1,h2,h3,h4,h5,h6 {
-  font-family: BetterHeader, Helvetica, Arial, sans;
-}
 
-code {
-    background-color: #233554;
-    color: white;
-    border-radius: 20px;
-    font-size: 20px;
-    padding: 0.2em 0.4em;
-  }
-  pre code {
-    background-color: #233554;
-    padding: 0;
-  }
 
 
 
@@ -163,9 +150,9 @@ code {
     --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
     --color-fg-default: #ccd6f6;
     --color-fg-muted: #8b949e;
-    --color-fg-subtle: #484f58;
+    --color-fg-subtle: var(--light-navy);
     --color-canvas-default: transparent;
-    --color-canvas-subtle: #ccd6f6;
+    --color-canvas-subtle: rgb(17, 35, 64);
     --color-border-default: #30363d;
     --color-border-muted: #21262d;
     --color-neutral-muted: rgba(110,118,129,0.4);

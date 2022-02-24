@@ -1,34 +1,9 @@
 <template>
-	<div id="projects">
+	<div id="blog">
 		<div class="title">
 			<h2 class="mainTitle">My Recent Writings</h2>
 			<p class="smallText">Checkout my daily thoughts and views on projects building</p>
 		</div>
-		
-<!-- 			<div class="flexbox">
-			        <ul class="flex-card-list">
-			          <li class="flex-card-listitem" v-for="post in $static.posts.edges" :key="post.id">
-			            <div class="flex-card">
-			              <div class="flex-card-image">
-			                <img :src="post.node.image" />
-			              </div>
-			              <div class="flex-card-content">
-			                <h3 class="flex-card-heading">
-			                	<g-link :to="post.node.path" rel="bookmark">{{ post.node.title }}</g-link>
-			                </h3>
-			                <p>{{post.node.summary}}</p>
-			                <a href="#" class="flex-card-button">Read More</a>
-			              </div>
-			            </div>
-			          </li>
-			     
-			        </ul>
-			      </div> -->
-
-
-
-
-
 
 <!-- 			
 			  <article v-for="post in $page.posts.edges" :key="post.id" >
@@ -40,18 +15,21 @@
 
  -->			  
             <div class="row">
-              <div class="col-md-4 tile" v-for="post in $static.posts.edges" :key="post.id">
+              <div class="col-md-4" v-for="post in $static.posts.edges" :key="post.id">
                 
-                <div class="row">
-                  <img :src="post.node.image" width="100%" height="180px" />
-                </div>
-
+                <div class="tile">
+                
+                <img :src="post.node.image" class="img-fluid" />
+                
                 <div class="tileText">
                   <g-link :to="post.node.path" rel="bookmark" class="tileTextStyle">{{ post.node.title }}</g-link>
                 </div>
+                
                 <div class="tiledesc">
                   {{ post.node.summary }}
                 </div>
+              
+              </div>
 
               </div>
             </div>
@@ -104,14 +82,23 @@ export default {
 
 <style lang="css" scoped>
 
-.projectContainer{
-padding: 70px 70px;
+#blog {
+  padding-top: var(--section-space);
+  padding-bottom: var(--section-space);
+
+}
+.img-fluid {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: 180px;
+  background-size:cover;
 }
 
 .mainTitle {
-	color: white;
-	font-size: 45px;
-font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, Roboto, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+	color: var(--lightest-slate);
+	font-size: var(--section-heading-font-size);
+  font-family: var(--font-sans);
 }
 
 .smallText {
@@ -127,19 +114,20 @@ font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, 
 	padding:10px;
 }
 
-
-
 .tile {
-  background: #172a45;
+  background: var(--light-navy);
   margin: 5px 5px;
   padding-bottom:20px;
+  box-shadow: 0 10px 30px -15px var(--navy-shadow);
+  border-radius: 7px;
 }
 
 
 .tileText {
-  color: cyan;
-  margin-top: 25px;
+  color: var(--lightest-slate);
+  margin-top: 10px;
   font-size: 18px;
+  text-style:none;
   font-weight: bolder;
   padding: 0px 20px;
   text-decoration: none;
@@ -147,13 +135,15 @@ font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system, system-ui, 
 
 .tileTextStyle{
   color: cyan;
+  color: var(--lightest-slate);
+  text-decoration: none;
 }
 
 
 .tiledesc {
-  color: white;
+  color: var(--light-slate);
   font-size: 14px;
-  margin-top: 10px;
+  margin-top: 2px;
   padding: 0px 20px;
 }
 

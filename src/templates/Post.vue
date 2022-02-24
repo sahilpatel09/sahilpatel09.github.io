@@ -165,7 +165,7 @@ code {
     --color-fg-muted: #8b949e;
     --color-fg-subtle: #484f58;
     --color-canvas-default: transparent;
-    --color-canvas-subtle: #233554;
+    --color-canvas-subtle: #ccd6f6;
     --color-border-default: #30363d;
     --color-border-muted: #21262d;
     --color-neutral-muted: rgba(110,118,129,0.4);

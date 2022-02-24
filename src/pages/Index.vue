@@ -2,12 +2,14 @@
   <Layout>
     <div class="container">
       <Bar />
-      <Hero />
-      <About />
-      <Featured />
-      <Projects />
-      <BlogSection />
-      <Contact />
+      <div class="container">
+        <Hero />
+        <About />
+        <Featured />
+        <Projects />
+        <BlogSection />
+        <Contact />  
+      </div>
     </div>
   </Layout>
 </template>
@@ -45,4 +47,5 @@ export default {
 html {
   scroll-behavior: smooth;
 }
+.fixedBody {margin: 0; height: 100%; overflow: hidden; position: fixed;}
 </style>

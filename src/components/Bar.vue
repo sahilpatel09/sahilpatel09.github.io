@@ -47,18 +47,18 @@
         <ul class="menuitems" id="menuItems" :data-visible="showHide">
           <li class="singleItem">
             <span class="numerals">01.</span
-            ><a href="#about" title="About me">About</a>
+            ><a href="#about" title="About me" @click="clicked">About</a>
           </li>
           <li class="singleItem">
             <span class="numerals">02.</span>Experience
           </li>
           <li class="singleItem">
             <span class="numerals">03.</span
-            ><a href="#projects" title="My Projects">Projects</a>
+            ><a href="#projects" title="My Projects" @click="clicked">Projects</a>
           </li>
           <li class="singleItem">
             <span class="numerals">04.</span
-            ><a href="#getintouch" title="Contact me">Contact</a>
+            ><a href="#getintouch" title="Contact me" @click="clicked">Contact</a>
           </li>
 
           <li class="specialButton">Resume</li>
@@ -82,9 +82,14 @@ export default {
       if (this.isopen === true) {
         this.isopen = false;
         this.showHide = false;
+        document.body.classList.remove('fixedBody')
+
+
       } else {
         this.isopen = true;
         this.showHide = true;
+        document.body.classList.add('fixedBody')
+
       }
     },
   },
@@ -92,6 +97,13 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+
+
+.t {
+  background-color: red;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -176,11 +188,7 @@ button:focus {
 }
 
 @media (max-width: 48rem) {
-  .toggle {
-    position: fixed;
-    margin: 0;
-    padding: 0;
-  }
+  
   .menuitems {
     position: fixed;
     inset: 0 0 0 30%;
@@ -206,7 +214,7 @@ button:focus {
 
   .toggle {
     display: block;
-    position: absolute;
+    position: fixed;
     background: transparent;
     border: none;
     outlline: none;

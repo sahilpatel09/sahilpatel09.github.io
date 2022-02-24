@@ -40,7 +40,9 @@ body {
   -webkit-text-stroke-color: #303c55;
 }
 .heroContainer {
-  padding: 70px 70px;
+  padding-top:40px;
+  padding-bottom:40px;
+
 }
 
 .initialText {
@@ -117,7 +119,7 @@ body {
   .heroContainer {
     align-items: start;
     justify-content: flex-start;
-    padding: 50px 10px;
+    
   }
 }
 </style>

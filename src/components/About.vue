@@ -56,7 +56,6 @@ export default {
   color: cyan;
 }
 .aContainer {
-  padding: 70px 70px;
 }
 .line {
   width: 30%;

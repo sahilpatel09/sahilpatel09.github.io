@@ -86,19 +86,23 @@ export default {
       return window.screen.width;
     }
   },
+  created() {
+    console.log("App initiated with screen size ",window.screen.width);
+  },
   methods: {
     clicked() {
       if (this.isopen === true) {
         this.isopen = false;
         this.showHide = false;
-        if(getScreenWidth() < 769){
+        if(this.getScreenWidth < 769){
           document.body.classList.remove('fixedBody');
         }
 
       } else {
         this.isopen = true;
         this.showHide = true;
-        if(getScreenWidth() < 769){
+                  document.body.classList.add('fixedBody');
+        if(this.getScreenWidth < 769){
           document.body.classList.add('fixedBody');
         }
 

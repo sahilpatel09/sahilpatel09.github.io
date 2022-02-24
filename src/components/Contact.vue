@@ -172,10 +172,8 @@ export default {
   font-weight: 600;
 }
 .cfContainer {
-  
   padding-top: var(--section-space);
   padding-bottom: var(--section-space);
-
 }
 
 .form {

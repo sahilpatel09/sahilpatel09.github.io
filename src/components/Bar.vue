@@ -1,74 +1,72 @@
 <template>
-    <div class="row">
-      <div class="brand">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          version="1.1"
-          width="50"
-          height="50"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-        >
-          <polygon
-            class="hex"
-            points="37.5,18.75 28.125,35 9.375,35 0,18.75 9.375,2.5 28.125,2.5"
-            fill="transparent"
-            stroke="cyan"
-            stroke-width="3"
-            transform="translate(10)"
-          ></polygon>
-          <text
-            x="28"
-            y="25"
-            fill="cyan"
-            font-family="Verdana"
-            font-size="18"
-            text-anchor="middle"
-          >
-            S
-          </text>
-        </svg>
-      </div>
-
-      <button
-        type="button"
-        class="toggle"
-        aria-controls="menuItems"
-        aria-expanded="false"
+  <div class="row">
+    <div class="brand">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        version="1.1"
+        width="50"
+        height="50"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
       >
-        <span class="sr-only">Menu</span>
-        <div class="wrapper-menu" :class="{ open: isopen }" @click="clicked">
-          <div class="line-menu half start"></div>
-          <div class="line-menu"></div>
-          <div class="line-menu half end"></div>
-        </div>
-      </button>
-
-      <div class="menu">
-        <ul class="menuitems" id="menuItems" :data-visible="showHide">
-          <li class="singleItem">
-            <span class="numerals">01.</span
-            ><a href="#about" title="About me" @click="clicked">About</a>
-          </li>
-          <li class="singleItem">
-            <span class="numerals">02.</span>Experience
-          </li>
-          <li class="singleItem">
-            <span class="numerals">03.</span
-            ><a href="#projects" title="My Projects" @click="clicked">Projects</a>
-          </li>
-          <li class="singleItem">
-            <span class="numerals">04.</span
-            ><a href="/blog" title="Blog" @click="clicked">Blog</a>
-          </li>
-          <li class="singleItem">
-            <span class="numerals">05.</span
-            ><a href="#getintouch" title="Contact me" @click="clicked">Contact</a>
-          </li>
-
-          <li class="specialButton">Resume</li>
-        </ul>
-      </div>
+        <polygon
+          class="hex"
+          points="37.5,18.75 28.125,35 9.375,35 0,18.75 9.375,2.5 28.125,2.5"
+          fill="transparent"
+          stroke="cyan"
+          stroke-width="3"
+          transform="translate(10)"
+        ></polygon>
+        <text
+          x="28"
+          y="25"
+          fill="cyan"
+          font-family="Verdana"
+          font-size="18"
+          text-anchor="middle"
+        >
+          S
+        </text>
+      </svg>
     </div>
+
+    <button
+      type="button"
+      class="toggle"
+      aria-controls="menuItems"
+      aria-expanded="false"
+    >
+      <span class="sr-only">Menu</span>
+      <div class="wrapper-menu" :class="{ open: isopen }" @click="clicked">
+        <div class="line-menu half start"></div>
+        <div class="line-menu"></div>
+        <div class="line-menu half end"></div>
+      </div>
+    </button>
+
+    <div class="menu">
+      <ul class="menuitems" id="menuItems" :data-visible="showHide">
+        <li class="singleItem">
+          <span class="numerals">01.</span
+          ><a href="#about" title="About me" @click="clicked">About</a>
+        </li>
+        <li class="singleItem"><span class="numerals">02.</span>Experience</li>
+        <li class="singleItem">
+          <span class="numerals">03.</span
+          ><a href="#projects" title="My Projects" @click="clicked">Projects</a>
+        </li>
+        <li class="singleItem">
+          <span class="numerals">04.</span
+          ><a href="/blog" title="Blog" @click="clicked">Blog</a>
+        </li>
+        <li class="singleItem">
+          <span class="numerals">05.</span
+          ><a href="#getintouch" title="Contact me" @click="clicked">Contact</a>
+        </li>
+
+        <li class="specialButton">Resume</li>
+      </ul>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -82,30 +80,26 @@ export default {
     };
   },
   computed: {
-    getScreenWidth(){
+    getScreenWidth() {
       return window.screen.width;
-    }
+    },
   },
-  created() {
-    
-  },
+  created() {},
   methods: {
     clicked() {
       if (this.isopen === true) {
         this.isopen = false;
         this.showHide = false;
-        if(this.getScreenWidth < 769){
-          document.body.classList.remove('fixedBody');
+        if (this.getScreenWidth < 769) {
+          document.body.classList.remove("fixedBody");
         }
-
       } else {
         this.isopen = true;
         this.showHide = true;
-                  document.body.classList.add('fixedBody');
-        if(this.getScreenWidth < 769){
-          document.body.classList.add('fixedBody');
+        document.body.classList.add("fixedBody");
+        if (this.getScreenWidth < 769) {
+          document.body.classList.add("fixedBody");
         }
-
       }
     },
   },
@@ -113,7 +107,6 @@ export default {
 </script>
 
 <style lang="css" scoped>
-
 body {
   overflow-x: hidden;
 }
@@ -121,9 +114,6 @@ body {
 .fixed {
   position: fixed;
 }
-
-
-
 
 button:focus {
   outline: 0;
@@ -206,7 +196,6 @@ button:focus {
 }
 
 @media (max-width: 48rem) {
-  
   .menuitems {
     position: fixed;
     inset: 0 0 0 30%;

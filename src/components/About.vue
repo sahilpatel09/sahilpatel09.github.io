@@ -3,8 +3,6 @@
     <h2 class="title"><span class="numerals">01. </span>About Me</h2>
     <div class="line"></div>
     <div class="row">
-      
-      
       <div class="col-md-8 textContent">
         Hello! This is Sahil, from Ahmedabad. I am a web developer and a poet.
         <br />
@@ -56,10 +54,8 @@ export default {
   color: cyan;
 }
 .aContainer {
-
   padding-top: var(--section-space);
   padding-bottom: var(--section-space);
-
 }
 .line {
   width: 30%;

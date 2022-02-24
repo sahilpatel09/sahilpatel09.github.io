@@ -8,7 +8,7 @@
         <Featured />
         <Projects />
         <BlogSection />
-        <Contact />  
+        <Contact />
       </div>
     </div>
   </Layout>
@@ -44,9 +44,13 @@ export default {
 </script>
 
 <style>
-
 html {
   scroll-behavior: smooth;
 }
-.fixedBody {margin: 0; height: 100%; overflow: hidden; position: fixed;}
+.fixedBody {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+}
 </style>

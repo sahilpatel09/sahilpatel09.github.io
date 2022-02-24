@@ -2,18 +2,34 @@
   <div class="container">
     <div class="row">
       <g-link to="/" class="backLink">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4z"/>
-        </svg> 
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-arrow-90deg-left"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4z"
+          />
+        </svg>
 
-      Go back to my profile.</g-link>
+        Go back to my profile.</g-link
+      >
       <div class="col-md-12">
         <h1 class="postTitle">{{ $page.post.title }}</h1>
         <hr class="line" />
         <div>
           <span class="metahead">Tags:</span>
-          <g-link class="metadata" v-for="tag in $page.post.tags" :to="tag.path" :key="tag.id">
-            {{ tag.title }}, 
+          <g-link
+            class="metadata"
+            v-for="tag in $page.post.tags"
+            :to="tag.path"
+            :key="tag.id"
+          >
+            {{ tag.title }},
           </g-link>
         </div>
 
@@ -24,11 +40,10 @@
           id="article-area"
           v-html="$page.post.content"
         />
-
       </div>
     </div>
   </div>
-<!--   <article>
+  <!--   <article>
     <h1>{{ $page.post.title }}</h1>
 
     <div>
@@ -63,10 +78,10 @@ query Post ($path: String!) {
 </page-query>
 
 <script>
-import MenuBar from "~/components/Bar.vue"
+import MenuBar from "~/components/Bar.vue";
 export default {
-  components:{
-    MenuBar
+  components: {
+    MenuBar,
   },
   metaInfo() {
     return {
@@ -77,43 +92,33 @@ export default {
 </script>
 
 <style>
+.backLink {
+  color: var(--green);
+  text-decoration: none;
+}
 
-  
-  .backLink{
-    color: var(--green);
-    text-decoration: none;
+.postTitle {
+  font-size: 40px;
+  color: var(--light-slate);
+  font-family: var(--font-mono);
+}
 
-  }
-
-  .postTitle {
-    font-size: 40px;
-    color: var(--light-slate);
-    font-family: var(--font-mono);
-  }
-
-  [data-lang]::before {
+[data-lang]::before {
   content: attr(data-lang);
   display: block;
   text-align: right;
 }
 
+.line {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
 
-  .line {
-      border: 1px solid rgba(255, 255, 255, 0.16);
-  }
-
-  .metahead {
-    color: white;
-  }
-  .metadata {
-    color: cyan;
-  }
-
-
-
-
-
-
+.metahead {
+  color: white;
+}
+.metadata {
+  color: cyan;
+}
 
 @media (prefers-color-scheme: dark) {
   .markdown-body {
@@ -155,10 +160,10 @@ export default {
     --color-canvas-subtle: rgb(17, 35, 64);
     --color-border-default: #30363d;
     --color-border-muted: #21262d;
-    --color-neutral-muted: rgba(110,118,129,0.4);
+    --color-neutral-muted: rgba(110, 118, 129, 0.4);
     --color-accent-fg: #58a6ff;
     --color-accent-emphasis: #1f6feb;
-    --color-attention-subtle: rgba(187,128,9,0.15);
+    --color-attention-subtle: rgba(187, 128, 9, 0.15);
     --color-danger-fg: #f85149;
   }
 }
@@ -185,7 +190,7 @@ export default {
     --color-prettylights-syntax-markup-italic: #24292f;
     --color-prettylights-syntax-markup-bold: #24292f;
     --color-prettylights-syntax-markup-deleted-text: #82071e;
-    --color-prettylights-syntax-markup-deleted-bg: #FFEBE9;
+    --color-prettylights-syntax-markup-deleted-bg: #ffebe9;
     --color-prettylights-syntax-markup-inserted-text: #116329;
     --color-prettylights-syntax-markup-inserted-bg: #dafbe1;
     --color-prettylights-syntax-markup-changed-text: #953800;
@@ -202,8 +207,8 @@ export default {
     --color-canvas-default: #ffffff;
     --color-canvas-subtle: #f6f8fa;
     --color-border-default: #d0d7de;
-    --color-border-muted: hsla(210,18%,87%,1);
-    --color-neutral-muted: rgba(175,184,193,0.2);
+    --color-border-muted: hsla(210, 18%, 87%, 1);
+    --color-neutral-muted: rgba(175, 184, 193, 0.2);
     --color-accent-fg: #0969da;
     --color-accent-emphasis: #0969da;
     --color-attention-subtle: #fff8c5;
@@ -217,7 +222,8 @@ export default {
   margin: 0;
   color: var(--color-fg-default);
   background-color: var(--color-canvas-default);
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   font-size: 16px;
   line-height: 1.5;
   word-wrap: break-word;
@@ -237,7 +243,7 @@ export default {
 .markdown-body h6:hover .anchor .octicon-link:before {
   width: 16px;
   height: 16px;
-  content: ' ';
+  content: " ";
   display: inline-block;
   background-color: currentColor;
   -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' aria-hidden='true'><path fill-rule='evenodd' d='M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z'></path></svg>");
@@ -284,9 +290,9 @@ export default {
 }
 
 .markdown-body h1 {
-  margin: .67em 0;
+  margin: 0.67em 0;
   font-weight: 600;
-  padding-bottom: .3em;
+  padding-bottom: 0.3em;
   font-size: 2em;
   border-bottom: 1px solid var(--color-border-muted);
 }
@@ -327,7 +333,7 @@ export default {
 .markdown-body kbd,
 .markdown-body pre,
 .markdown-body samp {
-  font-family: monospace,monospace;
+  font-family: monospace, monospace;
   font-size: 1em;
 }
 
@@ -340,7 +346,7 @@ export default {
   overflow: hidden;
   background: transparent;
   border-bottom: 1px solid var(--color-border-muted);
-  height: .25em;
+  height: 0.25em;
   padding: 0;
   margin: 24px 0;
   background-color: var(--color-border-default);
@@ -356,49 +362,49 @@ export default {
   line-height: inherit;
 }
 
-.markdown-body [type=button],
-.markdown-body [type=reset],
-.markdown-body [type=submit] {
+.markdown-body [type="button"],
+.markdown-body [type="reset"],
+.markdown-body [type="submit"] {
   -webkit-appearance: button;
 }
 
-.markdown-body [type=button]::-moz-focus-inner,
-.markdown-body [type=reset]::-moz-focus-inner,
-.markdown-body [type=submit]::-moz-focus-inner {
+.markdown-body [type="button"]::-moz-focus-inner,
+.markdown-body [type="reset"]::-moz-focus-inner,
+.markdown-body [type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-.markdown-body [type=button]:-moz-focusring,
-.markdown-body [type=reset]:-moz-focusring,
-.markdown-body [type=submit]:-moz-focusring {
+.markdown-body [type="button"]:-moz-focusring,
+.markdown-body [type="reset"]:-moz-focusring,
+.markdown-body [type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
-.markdown-body [type=checkbox],
-.markdown-body [type=radio] {
+.markdown-body [type="checkbox"],
+.markdown-body [type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
 
-.markdown-body [type=number]::-webkit-inner-spin-button,
-.markdown-body [type=number]::-webkit-outer-spin-button {
+.markdown-body [type="number"]::-webkit-inner-spin-button,
+.markdown-body [type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
-.markdown-body [type=search] {
+.markdown-body [type="search"] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
 
-.markdown-body [type=search]::-webkit-search-cancel-button,
-.markdown-body [type=search]::-webkit-search-decoration {
+.markdown-body [type="search"]::-webkit-search-cancel-button,
+.markdown-body [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
 .markdown-body ::-webkit-input-placeholder {
   color: inherit;
-  opacity: .54;
+  opacity: 0.54;
 }
 
 .markdown-body ::-webkit-file-upload-button {
@@ -439,14 +445,15 @@ export default {
   cursor: pointer;
 }
 
-.markdown-body details:not([open])>*:not(summary) {
+.markdown-body details:not([open]) > *:not(summary) {
   display: none !important;
 }
 
 .markdown-body kbd {
   display: inline-block;
   padding: 3px 5px;
-  font: 11px ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  font: 11px ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
+    Liberation Mono, monospace;
   line-height: 10px;
   color: var(--color-fg-default);
   vertical-align: middle;
@@ -471,7 +478,7 @@ export default {
 
 .markdown-body h2 {
   font-weight: 600;
-  padding-bottom: .3em;
+  padding-bottom: 0.3em;
   font-size: 1.5em;
   border-bottom: 1px solid var(--color-border-muted);
 }
@@ -488,12 +495,12 @@ export default {
 
 .markdown-body h5 {
   font-weight: 600;
-  font-size: .875em;
+  font-size: 0.875em;
 }
 
 .markdown-body h6 {
   font-weight: 600;
-  font-size: .85em;
+  font-size: 0.85em;
   color: var(--color-fg-muted);
 }
 
@@ -506,7 +513,7 @@ export default {
   margin: 0;
   padding: 0 1em;
   color: var(--color-fg-muted);
-  border-left: .25em solid var(--color-border-default);
+  border-left: 0.25em solid var(--color-border-default);
 }
 
 .markdown-body ul,
@@ -534,14 +541,16 @@ export default {
 
 .markdown-body tt,
 .markdown-body code {
-  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
+    Liberation Mono, monospace;
   font-size: 12px;
 }
 
 .markdown-body pre {
   margin-top: 0;
   margin-bottom: 0;
-  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
+    Liberation Mono, monospace;
   font-size: 12px;
   word-wrap: normal;
 }
@@ -690,7 +699,7 @@ export default {
 }
 
 .markdown-body g-emoji {
-  font-family: "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1em;
   font-style: normal !important;
   font-weight: 400;
@@ -714,11 +723,11 @@ export default {
   content: "";
 }
 
-.markdown-body>*:first-child {
+.markdown-body > *:first-child {
   margin-top: 0 !important;
 }
 
-.markdown-body>*:last-child {
+.markdown-body > *:last-child {
   margin-bottom: 0 !important;
 }
 
@@ -754,19 +763,19 @@ export default {
   margin-bottom: 16px;
 }
 
-.markdown-body blockquote>:first-child {
+.markdown-body blockquote > :first-child {
   margin-top: 0;
 }
 
-.markdown-body blockquote>:last-child {
+.markdown-body blockquote > :last-child {
   margin-bottom: 0;
 }
 
-.markdown-body sup>a::before {
+.markdown-body sup > a::before {
   content: "[";
 }
 
-.markdown-body sup>a::after {
+.markdown-body sup > a::after {
   content: "]";
 }
 
@@ -811,7 +820,7 @@ export default {
 .markdown-body h5 code,
 .markdown-body h6 tt,
 .markdown-body h6 code {
-  padding: 0 .2em;
+  padding: 0 0.2em;
   font-size: inherit;
 }
 
@@ -825,15 +834,15 @@ export default {
   list-style-type: decimal;
 }
 
-.markdown-body ol[type=a] {
+.markdown-body ol[type="a"] {
   list-style-type: lower-alpha;
 }
 
-.markdown-body ol[type=i] {
+.markdown-body ol[type="i"] {
   list-style-type: lower-roman;
 }
 
-.markdown-body div>ol:not([type]) {
+.markdown-body div > ol:not([type]) {
   list-style-type: decimal;
 }
 
@@ -845,12 +854,12 @@ export default {
   margin-bottom: 0;
 }
 
-.markdown-body li>p {
+.markdown-body li > p {
   margin-top: 16px;
 }
 
-.markdown-body li+li {
-  margin-top: .25em;
+.markdown-body li + li {
+  margin-top: 0.25em;
 }
 
 .markdown-body dl {
@@ -893,11 +902,11 @@ export default {
   background-color: transparent;
 }
 
-.markdown-body img[align=right] {
+.markdown-body img[align="right"] {
   padding-left: 20px;
 }
 
-.markdown-body img[align=left] {
+.markdown-body img[align="left"] {
   padding-right: 20px;
 }
 
@@ -912,7 +921,7 @@ export default {
   overflow: hidden;
 }
 
-.markdown-body span.frame>span {
+.markdown-body span.frame > span {
   display: block;
   float: left;
   width: auto;
@@ -940,7 +949,7 @@ export default {
   clear: both;
 }
 
-.markdown-body span.align-center>span {
+.markdown-body span.align-center > span {
   display: block;
   margin: 13px auto 0;
   overflow: hidden;
@@ -958,7 +967,7 @@ export default {
   clear: both;
 }
 
-.markdown-body span.align-right>span {
+.markdown-body span.align-right > span {
   display: block;
   margin: 13px 0 0;
   overflow: hidden;
@@ -988,7 +997,7 @@ export default {
   overflow: hidden;
 }
 
-.markdown-body span.float-right>span {
+.markdown-body span.float-right > span {
   display: block;
   margin: 13px auto 0;
   overflow: hidden;
@@ -997,7 +1006,7 @@ export default {
 
 .markdown-body code,
 .markdown-body tt {
-  padding: .2em .4em;
+  padding: 0.2em 0.4em;
   margin: 0;
   font-size: 85%;
   background-color: var(--color-neutral-muted);
@@ -1017,7 +1026,7 @@ export default {
   font-size: 100%;
 }
 
-.markdown-body pre>code {
+.markdown-body pre > code {
   padding: 0;
   margin: 0;
   word-break: normal;
@@ -1131,7 +1140,7 @@ export default {
   cursor: pointer;
 }
 
-.markdown-body .task-list-item+.task-list-item {
+.markdown-body .task-list-item + .task-list-item {
   margin-top: 3px;
 }
 
@@ -1140,27 +1149,15 @@ export default {
 }
 
 .markdown-body .task-list-item-checkbox {
-  margin: 0 .2em .25em -1.6em;
+  margin: 0 0.2em 0.25em -1.6em;
   vertical-align: middle;
 }
 
 .markdown-body .contains-task-list:dir(rtl) .task-list-item-checkbox {
-  margin: 0 -1.6em .25em .2em;
+  margin: 0 -1.6em 0.25em 0.2em;
 }
 
 .markdown-body ::-webkit-calendar-picker-indicator {
   filter: invert(50%);
 }
-
-
-
-
-
-
-
-
-
-
-
-
 </style>

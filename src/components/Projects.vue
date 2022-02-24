@@ -7,42 +7,42 @@
 
     <div class="row">
       <div class="col-sm-4 col-md-4" v-for="pj in projects">
-      	<div class="tile">
-        <div class="icons">
-          <div class="folder">
-            <img class="flex-start" src="/folder.svg" />
+        <div class="tile">
+          <div class="icons">
+            <div class="folder">
+              <img class="flex-start" src="/folder.svg" />
+            </div>
+
+            <div class="outbound_links">
+              <a
+                :href="pj.links.github"
+                title="Github Link For Project"
+                target="_blank"
+              >
+                <img class="flex-end" src="/github.svg" />
+              </a>
+              <a
+                :href="pj.links.external"
+                title="External Link | Live Project"
+                target="_blank"
+              >
+                <img class="flex-end" src="/link.svg" />
+              </a>
+            </div>
           </div>
 
-          <div class="outbound_links">
-            <a
-              :href="pj.links.github"
-              title="Github Link For Project"
-              target="_blank"
-            >
-              <img class="flex-end" src="/github.svg" />
-            </a>
-            <a
-              :href="pj.links.external"
-              title="External Link | Live Project"
-              target="_blank"
-            >
-              <img class="flex-end" src="/link.svg" />
-            </a>
+          <div class="tileText">
+            {{ pj.title }}
           </div>
-        </div>
-
-        <div class="tileText">
-          {{ pj.title }}
-        </div>
-        <div class="tiledesc">
-          {{ pj.description }}
-        </div>
-        <hr class="hline" />
-        <div class="tilepills" v-for="pill in pj.pills">
-          <p class="pill">{{ pill }}</p>
+          <div class="tiledesc">
+            {{ pj.description }}
+          </div>
+          <hr class="hline" />
+          <div class="tilepills" v-for="pill in pj.pills">
+            <p class="pill">{{ pill }}</p>
+          </div>
         </div>
       </div>
-    </div>
     </div>
   </div>
 </template>
@@ -98,11 +98,9 @@ export default {
 </script>
 
 <style lang="css" scoped>
-
 .projects {
-	padding-top: var(--section-space);
-	padding-bottom: var(--section-space);
-
+  padding-top: var(--section-space);
+  padding-bottom: var(--section-space);
 }
 
 .mainTitle {
@@ -129,8 +127,6 @@ export default {
   padding: 30px 30px;
   margin: 5px 0px;
   box-shadow: 0 10px 30px -15px var(--navy-shadow);
-
-
 }
 
 .icons {
@@ -152,7 +148,6 @@ export default {
   font-size: var(--fx-xxl);
   font-weight: bolder;
   font-family: var(--font-sans);
-
 }
 .tiledesc {
   color: var(--light-slate);
@@ -161,8 +156,7 @@ export default {
 }
 
 .hline {
-	border: 1px solid rgba(255, 255, 255, 0.16);
-
+  border: 1px solid rgba(255, 255, 255, 0.16);
 }
 .tilepills {
   color: var(--slate);
@@ -186,11 +180,9 @@ export default {
   }
 
   .pill {
-  display: inline-block;
-  margin: 2px;
-  font-size: 12px;
-}
-
-
+    display: inline-block;
+    margin: 2px;
+    font-size: 12px;
+  }
 }
 </style>

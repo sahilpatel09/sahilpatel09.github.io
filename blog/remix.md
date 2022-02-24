@@ -1,8 +1,8 @@
 ---
-title: "A hello world example in Gridsome 2"
-path: /gridsome-markdown-blog
+title: "Remix is catching pace"
+path: /remix
 date: 2020-10-24
-summary: "Read my guide to setting up Gridsome and how Vue can help greatly. Let vue js know what it is doing by the bold costerdem."
+summary: "Read my guide to setting up Gridsome and how Vue can help greatly. Remix might be the best one to go for in near future."
 image: "https://peerbits-wpengine.netdna-ssl.com/wp-content/uploads/2018/05/Vue.js-cta-main.jpg"
 tags: ['Vue.js' ]
 ---

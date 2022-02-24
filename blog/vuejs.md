@@ -2,7 +2,7 @@
 title: "Vue.js Basics & Tutorial"
 path: /vuejs
 date: 2022-02-20
-summary: "Read my guide to setting up Gridsome and how Vue can help greatly."
+summary: "Read my guide to setting up Gridsome and how Vue can help greatly. Read my guide to setting up GridsomeRead my guide to setting up Gridsome"
 image: "https://peerbits-wpengine.netdna-ssl.com/wp-content/uploads/2018/05/Vue.js-cta-main.jpg"
 tags: ['Vue.js' ]
 ---

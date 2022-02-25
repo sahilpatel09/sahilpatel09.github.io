@@ -18,7 +18,8 @@
  -->
     <div class="row">
       <div class="col-md-4" v-for="post in $static.posts.edges" :key="post.id">
-        <g-link :to="post.node.path">
+        <g-link :to="post.node.path" style=
+        "text-decoration:none;">
         <div class="tile">
           <div class="image">
             <img :src="post.node.image" class="img-fluid" />

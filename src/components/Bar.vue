@@ -1,6 +1,7 @@
 <template>
   <div class="row">
-    <div class="brand">
+    <g-link to="/">
+      <div class="brand">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         version="1.1"
@@ -28,6 +29,7 @@
         </text>
       </svg>
     </div>
+    </g-link>
 
     <button
       type="button"

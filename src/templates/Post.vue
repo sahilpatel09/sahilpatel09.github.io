@@ -1,7 +1,8 @@
 <template>
   <div class="container">
     <div class="row">
-      <g-link to="/" class="backLink">
+
+<!--       <g-link to="/" class="backLink">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
@@ -17,9 +18,18 @@
         </svg>
 
         Go back to my profile.</g-link
-      >
+      > -->
+      
+    </div>
+    <BlogMenu/>
+    <div class="row">
+
       <div class="col-md-12">
-        <h1 class="postTitle">{{ $page.post.title }}</h1>
+
+        <center>
+            <img :src="$page.post.image" class="postImage" />  
+          <h1 class="postTitle">{{ $page.post.title }}</h1>
+        </center>
         <hr class="line" />
         <div>
           <span class="metahead">Tags:</span>
@@ -68,6 +78,7 @@ query Post ($path: String!) {
   post: post (path: $path) {
     title
     date (format: "MMMM D, Y")
+    image
     content
     tags {
       title
@@ -78,10 +89,12 @@ query Post ($path: String!) {
 </page-query>
 
 <script>
-import MenuBar from "~/components/Bar.vue";
+import BlogMenu from "~/components/BlogBar.vue";
+
 export default {
   components: {
-    MenuBar,
+    BlogMenu,
+
   },
   metaInfo() {
     return {
@@ -95,6 +108,7 @@ export default {
 .backLink {
   color: var(--green);
   text-decoration: none;
+  margin:30px 0px;
 }
 
 .postTitle {
@@ -119,6 +133,32 @@ export default {
 .metadata {
   color: cyan;
 }
+
+.postImage {
+
+  display: block;
+  margin: 20px auto;
+  width: 75%;
+  max-width:100%;
+  height: auto;
+
+
+}
+
+@media (max-width: 48rem) {
+    .postTitle {
+      font-size: 20px;
+    }
+    .postImage {
+
+      display: block;
+      margin: 20px auto;
+      width: 100%;
+      max-width:100%;
+      height: auto;
+    }
+  }
+
 
 @media (prefers-color-scheme: dark) {
   .markdown-body {

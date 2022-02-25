@@ -96,7 +96,6 @@ export default {
       } else {
         this.isopen = true;
         this.showHide = true;
-        document.body.classList.add("fixedBody");
         if (this.getScreenWidth < 769) {
           document.body.classList.add("fixedBody");
         }

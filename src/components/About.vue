@@ -69,7 +69,7 @@ export default {
 
 .image {
   position: relative;
-  width: 300px;
+  width: 100%;
   text-align: center;
   margin: auto;
   display: block;
@@ -77,7 +77,7 @@ export default {
 
 .image img {
   width: 100%;
-  vertical-align: top;
+  vertical-align: middle;
 }
 
 .image:after {
@@ -96,11 +96,7 @@ export default {
   opacity: 0%;
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
+
 .textContent {
   max-width: 700px;
   padding: 20px;

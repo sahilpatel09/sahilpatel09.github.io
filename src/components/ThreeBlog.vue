@@ -3,7 +3,7 @@
     <div class="title">
       <h2 class="mainTitle">My Recent Writings</h2>
       <p class="smallText">
-        Checkout my daily thoughts and views on projects building
+        Checkout my daily thoughts and views on projects building.
       </p>
     </div>
 
@@ -18,8 +18,11 @@
  -->
     <div class="row">
       <div class="col-md-4" v-for="post in $static.posts.edges" :key="post.id">
+        <g-link :to="post.node.path">
         <div class="tile">
-          <img :src="post.node.image" class="img-fluid" />
+          <div class="image">
+            <img :src="post.node.image" class="img-fluid" />
+          </div>
 
           <div class="tileText">
             <g-link :to="post.node.path" rel="bookmark" class="tileTextStyle">{{
@@ -31,6 +34,7 @@
             {{ post.node.summary }}
           </div>
         </div>
+      </g-link>
       </div>
     </div>
   </div>
@@ -132,4 +136,35 @@ export default {
   margin-top: 2px;
   padding: 0px 20px;
 }
+
+.image {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  display: block;
+}
+
+.image img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.image:after {
+  content: "\A";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #00ffff50;
+  opacity: 100%;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+}
+.image:hover:after {
+  opacity: 0%;
+}
+
+
 </style>

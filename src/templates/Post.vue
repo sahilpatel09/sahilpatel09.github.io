@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <div class="row">
+<!--    <div class="row">
 
-<!--       <g-link to="/" class="backLink">
+       <g-link to="/" class="backLink">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
@@ -18,9 +18,9 @@
         </svg>
 
         Go back to my profile.</g-link
-      > -->
+      > 
       
-    </div>
+    </div> -->
     <BlogMenu/>
     <div class="row">
 
@@ -39,11 +39,11 @@
             :to="tag.path"
             :key="tag.id"
           >
-            {{ tag.title }},
+            #{{ tag.title }},
           </g-link>
         </div>
 
-        <p class="metadata">Posted on {{ $page.post.date }}</p>
+        <p class="metadata">Posted on <span class="metahead">{{ $page.post.date }}</span></p>
 
         <div
           class="markdown-body mb-8"
@@ -129,9 +129,11 @@ export default {
 
 .metahead {
   color: white;
+
 }
 .metadata {
   color: cyan;
+  text-decoration: none;
 }
 
 .postImage {

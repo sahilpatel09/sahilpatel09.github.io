@@ -53,6 +53,10 @@
         </li>
         <li class="singleItem">
           <span class="numerals">II.</span
+          ><g-link to="/blog" title="Blog" @click="clicked">Blog</g-link>
+        </li>
+        <li class="singleItem">
+          <span class="numerals">III.</span
           ><g-link to="/#getintouch" title="Contact" @click="clicked"
             >Contact</g-link
           >

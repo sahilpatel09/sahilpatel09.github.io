@@ -58,7 +58,7 @@
         </li>
         <li class="singleItem">
           <span class="numerals">04.</span
-          ><a href="/blog" title="Blog" @click="clicked">Blog</a>
+          ><g-link to="/blog" title="Blog" @click="clicked">Blog</g-link>
         </li>
         <li class="singleItem">
           <span class="numerals">05.</span

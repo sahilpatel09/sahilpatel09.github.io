@@ -1,5 +1,6 @@
 <template>
   <Layout>
+    <ClientOnly>
     <div class="container">
       <Bar />
       <div>
@@ -11,6 +12,7 @@
         <Contact />
       </div>
     </div>
+    </ClientOnly>
   </Layout>
 </template>
 

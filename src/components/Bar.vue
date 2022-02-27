@@ -1,4 +1,5 @@
 <template>
+  <ClientOnly>
   <div class="row">
     <g-link to="/">
       <div class="brand">
@@ -70,7 +71,7 @@
         </li>
         <li class="singleItem">
           <span class="numerals">04.</span
-          ><g-link to="/blog/" title="Blog">Blog</g-link>
+          ><g-link to="/blog" @click="clicked">Blog</g-link>
         </li>
         <li class="singleItem">
           <span class="numerals">05.</span
@@ -81,6 +82,7 @@
       </ul>
     </div>
   </div>
+</ClientOnly>
 </template>
 
 <script>

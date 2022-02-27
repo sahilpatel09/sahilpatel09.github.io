@@ -14,8 +14,7 @@
       <div class="col-12 tron">
         <h1 class="blogTitle">{{ $page.tag.title }}</h1>
         <p class="blogDescription">
-          So far I’ve written 8 longform tutorials & articles. For more compact
-          content visit my Digital Garden. RSS.
+          All the blog posts that includes the tag "{{ $page.tag.title }}". 
         </p>
       </div>
     </div>

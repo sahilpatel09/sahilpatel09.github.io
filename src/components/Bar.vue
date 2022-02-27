@@ -55,7 +55,7 @@
         desired pages and freez to the main page.
 
        -->
-      <!-- <input type="hidden" name="form-name" value="sellers-form" /> -->
+      <input type="hidden" name="form-name" value="sellers-form" />
 
 
       <ul class="menuitems" id="menuItems" :data-visible="showHide">
@@ -70,7 +70,7 @@
         </li>
         <li class="singleItem">
           <span class="numerals">04.</span
-          ><g-link to="/blog" title="Blog">Blog</g-link>
+          ><g-link to="/blog/" title="Blog">Blog</g-link>
         </li>
         <li class="singleItem">
           <span class="numerals">05.</span

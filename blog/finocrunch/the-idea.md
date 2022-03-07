@@ -3,7 +3,7 @@ title: "Finocrunch: Another HomeFinance Manager"
 path: /finocrunch-home-fianance-manager
 date: 2022-02-28
 summary: "Today, I got a new idea for a project which can help a lot of people learn front-end development."
-image: "https://res.cloudinary.com/musicstreaming/image/upload/v1646040506/finocrunch/logo-text-big_keeszd.png"
+image: "https://res.cloudinary.com/sahil-patel/image/upload/v1646040506/finocrunch/logo-text-big_keeszd.png"
 tags: ['FinoCrunch']
 ---
 

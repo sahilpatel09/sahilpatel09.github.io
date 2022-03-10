@@ -78,7 +78,7 @@
           ><a href="#getintouch" title="Contact me" @click="clicked">Contact</a>
         </li>
 
-        <li class="specialButton">Resume</li>
+        <li class="specialButton"><g-link to="/resume.pdf">Resume</g-link></li>
       </ul>
     </div>
   </div>

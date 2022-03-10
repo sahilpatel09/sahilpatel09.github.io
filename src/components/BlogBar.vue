@@ -62,7 +62,7 @@
           >
         </li>
 
-        <li class="specialButton">Resume</li>
+        <li class="specialButton"><a href="/resume.pdf">Resume</a></li>
       </ul>
     </div>
   </div>

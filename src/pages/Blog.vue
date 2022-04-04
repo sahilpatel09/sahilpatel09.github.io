@@ -10,6 +10,8 @@
       <a href="#support">Support</a>
     </div>
 
+
+
     <div class="row">
       <div class="col-12 tron">
         <h1 class="blogTitle">Writing</h1>
@@ -37,6 +39,11 @@
         </div>
       </div>
     </div>
+
+
+
+
+
     <center>
       <Pager :info="$page.posts.pageInfo" class="paginations" />
     </center>

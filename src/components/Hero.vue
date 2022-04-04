@@ -1,7 +1,7 @@
 <template>
-  <div class="col heroContainer">
+  <div class="col heroContainer text-center">
     <p class="initialText">Hello My Name is</p>
-    <h2 class="theName">Sahil Patel,</h2>
+    <h2 class="theName text-center">Sahil Patel,</h2>
     <h3 class="supportingText">
       & I <span class="heart">&hearts;</span>
       <span class="navyBlue"> Navy Blue.</span>
@@ -40,7 +40,7 @@ body {
   -webkit-text-stroke-color: #303c55;
 }
 .heroContainer {
-  padding-top: 40px;
+  padding-top: 70px;
   padding-bottom: 40px;
 }
 
@@ -69,7 +69,6 @@ body {
 
 .supportingDescription {
   color: #8892b0;
-  max-width: 50rem;
 }
 
 .contactButton {
@@ -96,7 +95,6 @@ body {
     font-size: 54px;
     font-weght: 600;
     font-style: normal;
-    text-align: start;
     text-indent: 0px;
   }
 
@@ -108,7 +106,7 @@ body {
     line-height: 60px;
     font-weght: 600;
     font-style: normal;
-    text-align: start;
+
     text-indent: 0px;
   }
   .supportingDescription {
@@ -119,5 +117,9 @@ body {
     align-items: start;
     justify-content: flex-start;
   }
+}
+
+.text-center{
+  text-align: center;
 }
 </style>

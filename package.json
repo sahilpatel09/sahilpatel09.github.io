@@ -17,6 +17,10 @@
     "gridsome-plugin-seo": "^1.0.2"
   },
   "devDependencies": {
-    "prettier": "^2.5.1"
+    "autoprefixer": "9",
+    "gridsome-plugin-tailwindcss": "^4.1.1",
+    "postcss": "7",
+    "prettier": "^2.5.1",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   }
 }

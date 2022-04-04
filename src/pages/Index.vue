@@ -4,12 +4,12 @@
     <div class="container">
       <Bar />
       <div>
-        <Hero />
+<!--         <Hero />
         <About />
         <Featured />
         <Projects />
         <BlogSection />
-        <Contact />
+        <Contact /> -->
       </div>
     </div>
     </ClientOnly>

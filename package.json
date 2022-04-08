@@ -10,14 +10,17 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.4.0",
+    "@gridsome/remark-prismjs": "^0.5.0",
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.4",
     "gh-pages": "^3.2.3",
     "gridsome": "^0.7.0",
+    "gridsome-plugin-remark-prismjs-all": "^0.4.8",
     "gridsome-plugin-seo": "^1.0.2"
   },
   "devDependencies": {
     "autoprefixer": "9",
+    "gridsome-plugin-htaccess": "^0.2.1",
     "gridsome-plugin-tailwindcss": "^4.1.1",
     "postcss": "7",
     "prettier": "^2.5.1",

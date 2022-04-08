@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container mx-auto">
     <BlogMenu />
 
     <div class="row scrollmenu">
@@ -10,40 +10,113 @@
       <a href="#support">Support</a>
     </div>
 
-
-
     <div class="row">
       <div class="col-12 tron">
-        <h1 class="blogTitle">Writing</h1>
-        <p class="blogDescription">
+        <h1 class="blogTitle font-mono">Writing</h1>
+        <p class="blogDescription text-center text-base md:text-2xl">
           So far I’ve written 8 longform tutorials & articles. For more compact
           content visit my Digital Garden. RSS.
         </p>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-md-4" v-for="post in $page.posts.edges" :key="post.id">
-        <div class="tile">
-          <img :src="post.node.image" class="img-fluid" />
-
-          <div class="tileText">
-            <g-link :to="post.node.path" rel="bookmark" class="tileTextStyle">{{
-              post.node.title
-            }}</g-link>
-          </div>
-
-          <div class="tiledesc">
-            {{ post.node.summary }}
+    <section class="text-gray-400 body-font mt-10">
+      <div class="container md:px-5 py-5 mx-auto">
+        <div class="flex flex-wrap -m-4">
+          <div
+            class="p-4 md:w-1/3"
+            v-for="post in $page.posts.edges"
+            :key="post.id"
+          >
+            <div
+              class="bg-light-navy h-full border-2 border-gray-800 rounded-lg overflow-hidden"
+            >
+              <img
+                class="lg:h-48 md:h-36 w-full object-cover object-center"
+                :src="post.node.image"
+                alt="blog"
+              />
+              <div class="p-6">
+                <h1 class="title-font text-lg font-medium text-white mb-3">
+                  <g-link :to="post.node.path">
+                    {{ post.node.title }}
+                  </g-link>
+                </h1>
+                <p class="leading-relaxed">{{ post.node.summary }}</p>
+                <a
+                  class="text-indigo-400 inline-flex items-center my-2"
+                  :href="post.node.path"
+                >
+                  Read More.
+                  <svg
+                    class="w-4 h-4 ml-2"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14"></path>
+                    <path d="M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!--       <div class="">
+        <div class="flex">
+            <a v-if="$page.posts.pageInfo.totalPages != $page.posts.pageInfo.currentPage" :href="$page.posts.pageInfo.currentPage-1" class="px-4 py-2 mx-1 text-gray-300 bg-light-navy rounded-md cursor-not-allowed hover:text-gray-500">
+                <div class="flex items-center -mx-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+                    </svg>
+
+                    <span class="mx-1">
+                        previous
+                    </span>
+                </div>
+            </a>
+
+            <div v-for="index in $page.posts.pageInfo.totalPages" :key="index">
+              
+              <div v-if="index == 1">
+                <a href="/blog" class="px-4 py-2 mx-2 text-gray-300 bg-lightest-navy transition duration-200 rounded-md sm:inline hover:bg-navy ">
+                  {{ index }}
+              </a>  
+              </div>
+
+              <div v-if="index > 1">
+                <a :href='index' class="px-4 py-2 mx-2 text-gray-300 bg-lightest-navy transition duration-200 rounded-md sm:inline hover:bg-navy ">
+                    {{ index }}
+                </a>
+              </div>
 
 
+            </div>
 
-
-
+            <a v-if="$page.posts.pageInfo.totalPages != $page.posts.pageInfo.currentPage" :href="$page.posts.pageInfo.currentPage+1" class="px-4 py-2 mx-1 text-gray-700 transition-colors duration-200 transform bg-white rounded-md dark:bg-gray-900 dark:text-gray-200 hover:bg-blue-500 dark:hover:bg-blue-500 hover:text-white dark:hover:text-gray-200">
+                <div class="flex items-center -mx-1">
+                    <span class="mx-1">
+                        Next
+                    </span>
+                    
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mx-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </div>
+            </a>
+        </div>
+      </div>
+            
+        
+      <div class="text-white">
+        {{ $page.posts.pageInfo }}
+      </div> -->
     <center>
       <Pager :info="$page.posts.pageInfo" class="paginations" />
     </center>
@@ -87,14 +160,6 @@ export default {
 </script>
 
 <style scoped>
-.img-fluid {
-  display: block;
-  max-width: 100%;
-  width: 100%;
-  height: 180px;
-  background-size: cover;
-}
-
 div.scrollmenu {
   background-color: var(--navy);
   overflow: auto;
@@ -138,40 +203,7 @@ div.scrollmenu a:hover {
   font-size: 3.052rem;
 }
 .blogDescription {
-  font-size: 20px;
   max-width: 50ch;
-  margin-top: -20px;
-  text-align: center;
-}
-.tile {
-  background: var(--light-navy);
-  margin: 5px 5px;
-  padding-bottom: 20px;
-  box-shadow: 0 10px 30px -15px var(--navy-shadow);
-  border-radius: 7px;
-}
-
-.tileText {
-  color: var(--lightest-slate);
-  margin-top: 10px;
-  font-size: 18px;
-  text-style: none;
-  font-weight: bolder;
-  padding: 0px 20px;
-  text-decoration: none;
-}
-
-.tileTextStyle {
-  color: cyan;
-  color: var(--lightest-slate);
-  text-decoration: none;
-}
-
-.tiledesc {
-  color: var(--light-slate);
-  font-size: 14px;
-  margin-top: 2px;
-  padding: 0px 20px;
 }
 
 .paginations {

@@ -1,54 +1,54 @@
 <template>
   <ClientOnly>
-  <div class="row">
-    <g-link to="/">
-      <div class="brand">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        version="1.1"
-        width="50"
-        height="50"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
+    <div class="flex justify-between container mx-auto py-3">
+      <g-link to="/">
+        <div class="flex items-center justify-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            width="50"
+            height="50"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <polygon
+              class="hex"
+              points="37.5,18.75 28.125,35 9.375,35 0,18.75 9.375,2.5 28.125,2.5"
+              fill="transparent"
+              stroke="cyan"
+              stroke-width="3"
+              transform="translate(10)"
+            ></polygon>
+            <text
+              x="28"
+              y="25"
+              fill="cyan"
+              font-family="Verdana"
+              font-size="18"
+              text-anchor="middle"
+            >
+              S
+            </text>
+          </svg>
+        </div>
+      </g-link>
+
+      <button
+        type="button"
+        class="toggle"
+        aria-controls="menuItems"
+        aria-expanded="false"
       >
-        <polygon
-          class="hex"
-          points="37.5,18.75 28.125,35 9.375,35 0,18.75 9.375,2.5 28.125,2.5"
-          fill="transparent"
-          stroke="cyan"
-          stroke-width="3"
-          transform="translate(10)"
-        ></polygon>
-        <text
-          x="28"
-          y="25"
-          fill="cyan"
-          font-family="Verdana"
-          font-size="18"
-          text-anchor="middle"
-        >
-          S
-        </text>
-      </svg>
-    </div>
-    </g-link>
+        <span class="sr-only">Menu</span>
+        <div class="wrapper-menu" :class="{ open: isopen }" @click="clicked">
+          <div class="line-menu half start"></div>
+          <div class="line-menu"></div>
+          <div class="line-menu half end"></div>
+        </div>
+      </button>
 
-    <button
-      type="button"
-      class="toggle"
-      aria-controls="menuItems"
-      aria-expanded="false"
-    >
-      <span class="sr-only">Menu</span>
-      <div class="wrapper-menu" :class="{ open: isopen }" @click="clicked">
-        <div class="line-menu half start"></div>
-        <div class="line-menu"></div>
-        <div class="line-menu half end"></div>
-      </div>
-    </button>
-
-    <div class="menu">
-      <!-- 
-        
+      <div class="menu">
+        <!-- 
+         flex justify-between items-center gap-5
         If this website is supposed to be deployed to the Netlify CDN, then please to uncomment
         the line below as it makes Netlify Forms disable. 
 
@@ -56,35 +56,45 @@
         desired pages and freez to the main page.
 
        -->
-      <input type="hidden" name="form-name" value="sellers-form" />
+        <input type="hidden" name="form-name" value="sellers-form" />
+
+        <ul class="menuitems" id="menuItems" :data-visible="showHide">
+          <li class="py-2.5 px-1">
+            <span class="numerals">01.</span
+            ><a href="#about" title="About me" @click="clicked">About</a>
+          </li>
+          <li class="py-2.5 px-1">
+            <span class="numerals">02.</span>Experience
+          </li>
+          <li class="py-2.5 px-1">
+            <span class="numerals">03.</span
+            ><a href="#projects" title="My Projects" @click="clicked"
+              >Projects</a
+            >
+          </li>
+          <li class="py-2.5 px-1">
+            <span class="numerals">04.</span
+            ><g-link to="/blog" @click="clicked">Blog</g-link>
+          </li>
+          <li class="py-2.5 px-1">
+            <span class="numerals">05.</span
+            ><a href="#getintouch" title="Contact me" @click="clicked"
+              >Contact</a
+            >
+          </li>
 
 
-      <ul class="menuitems" id="menuItems" :data-visible="showHide">
-        <li class="singleItem">
-          <span class="numerals">01.</span
-          ><a href="#about" title="About me" @click="clicked">About</a>
-        </li>
-        <li class="singleItem"><span class="numerals">02.</span>Experience</li>
-        <li class="singleItem">
-          <span class="numerals">03.</span
-          ><a href="#projects" title="My Projects" @click="clicked">Projects</a>
-        </li>
-        <li class="singleItem">
-          <span class="numerals">04.</span
-          ><g-link to="/blog" @click="clicked">Blog</g-link>
-        </li>
-        <li class="singleItem">
-          <span class="numerals">05.</span
-          ><a href="#getintouch" title="Contact me" @click="clicked">Contact</a>
-        </li>
-
-        <li class="specialButton"><g-link to="/resume.pdf">Resume</g-link></li>
-      </ul>
+          <li class="">
+            <a class="inline-flex items-center justify-center py-2 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-green-700 hover:bg-green-600 focus:shadow-outline focus:outline-none hover:text-white"
+              href="https://drive.google.com/file/d/1TZSQu_c0VFeZvrwy8excuGryqaB-d-E9/view?usp=sharing"
+              target="_blank"
+              >Resume</a
+            >
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-
-  
-</ClientOnly>
+  </ClientOnly>
 </template>
 
 <script>
@@ -152,17 +162,7 @@ button:focus {
   border: 0;
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
 
-.brand {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .menu {
   list-style-type: none;
 }
@@ -176,10 +176,7 @@ button:focus {
   gap: var(--flex-gap, 2rem);
   color: #8892b0;
 }
-.menu ul li a {
-  text-decoration: none;
-  color: #8892b0;
-}
+
 .menu ul li a:hover {
   color: cyan;
   transition: all 333ms ease-in;
@@ -189,20 +186,13 @@ button:focus {
   color: cyan;
   padding-right: 5px;
 }
-.singleItem {
-  padding: 10px 5px;
-}
+
 .singleItem:hover {
   color: cyan;
   transition: all 1s ease;
 }
 
-.specialButton {
-  color: rgb(100, 255, 218);
-  border: 1px solid cyan;
-  padding: 10px 15px;
-  border-radius: 7px;
-}
+
 
 .toggle {
   display: none;

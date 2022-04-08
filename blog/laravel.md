@@ -15,9 +15,14 @@ In this article, I have shown how to make a simple and full screen Login screen.
 
 This is the login page design with black background. The original design is with darker grey color.
 
+
+
+
+
 # Basic HTML Template
 
-```HTML
+
+```html{codeTitle: "In src/main.js"}
 
 <!DOCTYPE html>
 <html lang="">
@@ -46,9 +51,17 @@ Here, this is a simple HTML template with Bootstrap CDN added with a link tag.
 
 Create an external stylesheet and add it, or embed internally like me.
 
+```json
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "age": 25
+}
+```
+
 # Complete CSS
 
-```CSS
+```css
 
 <style>
 .whiteColor {

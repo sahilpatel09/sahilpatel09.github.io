@@ -1,9 +1,12 @@
 ---
-title: "IP Tracker"
-path: /gridsome-markdown-blog
+path: /ip-tracker
+category: "Web Development"
+title: "IP Tracker & Map"
+summary: "A small weekend project to get the information of IP address and its possible location."
+gitlink: "https://github.com/sahilpatel09/ip-tracker"
+liveurl: "https://brave-mirzakhani-8081ab.netlify.app/"
 date: 2020-10-24
-summary: "Read my guide to setting up Gridsome"
-tags: [ 'Blog' ]
+tags: [ 'Vue.js', 'HTML' ]
 ---
 
 ## Hello world!

@@ -1,82 +1,160 @@
 <template>
-  <div class="container">
-<!--    <div class="row">
+  <div class="container mx-auto">
 
-       <g-link to="/" class="backLink">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          class="bi bi-arrow-90deg-left"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4z"
-          />
-        </svg>
-
-        Go back to my profile.</g-link
-      > 
-      
-    </div> -->
     <BlogMenu/>
-    <div class="row">
 
-      <div class="col-md-12">
 
-        <center>
-            <img :src="$page.post.image" class="postImage" />  
-          <h1 class="postTitle">{{ $page.post.title }}</h1>
-        </center>
-        <hr class="line" />
-        <div>
-          <span class="metahead">Tags:</span>
+    <div class="px-2 py-10 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-3xl md:px-24 lg:px-8 lg:pt-20">
+  <div class="max-w-3xl mb-5 md:mx-auto sm:text-center lg:max-w-3xl">
+    <div>
+      <p class="inline-block mb-2 text-xl font-semibold tracking-wider text-gray-400">
+        {{ $page.post.date }} |           <span class="text-slate ">Tags:</span>
           <g-link
-            class="metadata"
+            class="text-lightest-slate"
             v-for="tag in $page.post.tags"
             :to="tag.path"
             :key="tag.id"
           >
             #{{ tag.title }},
           </g-link>
+      </p>
+    </div>
+    <h2 class="max-w-full font-sans text-4xl font-bold leading-none tracking-tight sm:text-6xl md:mx-auto text-slate text-lightest-slate">
+        {{ $page.post.title }}
+    </h2>
+
+<p class="text-base md:text-lg text-lightest-slate max-w-xl mx-auto">
+      {{ $page.post.summary }}
+    </p>
+  </div>
+          <div class="flex max-w-lg mx-auto px-5 py-2 overflow-hidden bg-light-navy rounded-lg shadow-lg md:hidden">
+            <img class="object-cover w-20 mx-auto rounded-full m-3" src="@/assets/small_me.jpg" alt="avatar">
+            
+            <div class="flex flex-col items-start px-3 py-3">
+
+
+                <h1 class="mx-3 text-lg font-semibold bg-light-navy text-center mx-auto text-white">Sahil Patel</h1>
+                <p class="text-center text-gray-400">Full Stack Developer, UI / UX Designer , and lifelong learner.</p>
+
+            </div>
+
         </div>
 
-        <p class="metadata">Posted on <span class="metahead">{{ $page.post.date }}</span></p>
+<!--   <img :src="$page.post.image" class="postImage" /> -->
+</div>
 
-        <div
-          class="markdown-body mb-8"
-          id="article-area"
-          v-html="$page.post.content"
-        />
-      </div>
-    </div>
+
+<div class="flex md:flex-wrap flex-col gap-4 mx-auto flex-col-reverse md:flex-row md:flex-nowrap">
+  <div class="w-full md:w-96 h-auto z-10">
+   
+
+        <div class="hidden md:block flex max-w-full mx-auto px-5 py-2 overflow-hidden bg-light-navy rounded-lg shadow-lg">
+            <img class="object-cover w-20 mx-auto rounded-full m-3" src="@/assets/small_me.jpg" alt="avatar">
+            
+            <div class="flex flex-col items-start px-3 py-3">
+
+
+                <h1 class="mx-3 text-lg font-semibold bg-light-navy text-center mx-auto text-white">Sahil Patel</h1>
+                <p class="text-center text-gray-400">Full Stack Developer, UI / UX Designer , and lifelong learner.</p>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <div class="w-full mt-6 pl-1  rounded bg-navy shadow-2xl">
+          <h2 class="text-3xl py-2 text-gray-400">Recent Posts</h2>
+        </div>
+    <Recents />
+
+
+
+
   </div>
-  <!--   <article>
-    <h1>{{ $page.post.title }}</h1>
 
-    <div>
-      Tags:
-      <g-link v-for="tag in $page.post.tags" :to="tag.path" :key="tag.id">
-        #{{ tag.title }}
-      </g-link>
-    </div>
+  <div class="w-full md:w-2/3 h-auto bg-light-navy shadow-lg pb-7">
+    <img :src="$page.post.image" class="w-full object-cover pb-5" />
+            <div
+              class="markdown-body mb-8 px-6"
+              id="article-area"
+              v-html="$page.post.content"
+            />
+      </div>
 
-    <p>Posted on {{ $page.post.date }}</p>
+  </div>
 
-    <div
-      class="markdown-body mb-8"
-      id="article-area"
-      v-html="$page.post.content"
-    />
-  </article> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <Footer />
+
+</div>
+
+
+
+
+
+
 </template>
 
 <page-query>
 query Post ($path: String!) {
   post: post (path: $path) {
     title
+    summary
     date (format: "MMMM D, Y")
     image
     content
@@ -88,12 +166,16 @@ query Post ($path: String!) {
 }
 </page-query>
 
+
+
 <script>
 import BlogMenu from "~/components/BlogBar.vue";
+import Recents from '~/components/RecentsPosts.vue'
+import Footer from '~/components/Footer.vue'
 
 export default {
   components: {
-    BlogMenu,
+    BlogMenu,Recents,Footer
 
   },
   metaInfo() {
@@ -105,61 +187,57 @@ export default {
 </script>
 
 <style>
-.backLink {
-  color: var(--green);
-  text-decoration: none;
-  margin:30px 0px;
+.gridsome-code-title {
+  position: relative;
+  z-index: 100;
+  margin-bottom: -0.8em;
+  background-color: var(--navy);
+  color: var(--slate);
+  font-style: italic;
+  font-weight: 800;
+  text-align: left;
+  font-family: PT Mono, Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  line-height: 1.5;
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.3em;
 }
-
-.postTitle {
-  font-size: 40px;
+[data-language]::before {
+  content: attr(data-language);
+  display: block;
   color: var(--light-slate);
-  font-family: var(--font-mono);
-}
-
-[data-lang]::before {
-  content: attr(data-lang);
-  display: block;
   text-align: right;
-}
+  text-transform: uppercase;
 
-.line {
-  border: 1px solid rgba(255, 255, 255, 0.16);
-}
-
-.metahead {
-  color: white;
-
-}
-.metadata {
-  color: cyan;
-  text-decoration: none;
-}
-
-.postImage {
-
-  display: block;
-  margin: 20px auto;
-  width: 75%;
-  max-width:100%;
-  height: auto;
+  
 
 
 }
 
-@media (max-width: 48rem) {
-    .postTitle {
-      font-size: 20px;
-    }
-    .postImage {
 
-      display: block;
-      margin: 20px auto;
-      width: 100%;
-      max-width:100%;
-      height: auto;
-    }
-  }
+::-webkit-scrollbar {
+  height: 4px;
+  width: 7px;
+  border: 1px solid red;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0;
+  background: var(--navy);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--lightest-navy);
+}
+
+
+
+
+
+
+
+
+
 
 
 @media (prefers-color-scheme: dark) {
@@ -1202,4 +1280,10 @@ export default {
 .markdown-body ::-webkit-calendar-picker-indicator {
   filter: invert(50%);
 }
+
+
+
+
+
+
 </style>

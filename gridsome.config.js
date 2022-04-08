@@ -2,6 +2,13 @@ module.exports = {
   siteName: "Sahil Patel",
   siteDescription: "Personal Portfolio Website",
   siteUrl: "https://sahilpatel09.github.io",
+  chainWebpack: (config) => {
+    config.module
+      .rule("postcss-loader")
+      .test(/.css$/)
+      .use(["tailwindcss", "autoprefixer"])
+      .loader("postcss-loader");
+  },
   plugins: [
     {
       use: "@gridsome/source-filesystem",
@@ -13,20 +20,53 @@ module.exports = {
             typeName: "Tag",
             create: true,
           },
+          
         },
       },
     },
+
     {
-            use: "gridsome-plugin-tailwindcss",
-            options: {
-                    tailwindConfig: './tailwind.config.js',
-                    
-                  }
-    }
+      use: "@gridsome/source-filesystem",
+      options: {
+        path: "content/projects/**/*.md",
+        typeName: "Project",
+
+        refs: {
+          tags: {
+            typeName: "Tag",
+            create: true,
+          },
+        },
+      },
+    },
+
+    {
+      use: "gridsome-plugin-htaccess",
+      options: {
+        textCompression: [
+        "text/html",
+        "application/javascript",
+        "text/css",
+        "image/png",
+        ],
+      },
+      fileExpirations: {
+          default: "access plus 1 month",
+        },
+    },
+
+    //tailwindcss config
+    {
+      use: "gridsome-plugin-tailwindcss",
+      // options: {
+      //         tailwindConfig: './tailwind.config.js',
+      //       },
+    },
   ],
   templates: {
     Tag: "/tag/:id",
     Post: "/blog/:path",
+    Project: "/project/:path",
   },
   transformers: {
     remark: {
@@ -34,6 +74,9 @@ module.exports = {
       externalLinksTarget: "_blank",
       externalLinksRel: ["noopener"],
       anchorClassName: "icon icon-link",
+      plugins: [
+        'gridsome-plugin-remark-prismjs-all',
+      ],
     },
   },
 };

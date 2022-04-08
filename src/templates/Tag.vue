@@ -14,13 +14,17 @@
       <div class="col-12 tron">
         <h1 class="blogTitle">{{ $page.tag.title }}</h1>
         <p class="blogDescription">
-          All the blog posts that includes the tag "{{ $page.tag.title }}". 
+          All the blog posts that includes the tag "{{ $page.tag.title }}".
         </p>
       </div>
     </div>
 
     <div class="row blogList">
-      <div class="col-md-4" v-for="post in $page.tag.belongsTo.edges" :key="post.node.id">
+      <div
+        class="col-md-4"
+        v-for="post in $page.tag.belongsTo.edges"
+        :key="post.node.id"
+      >
         <div class="tile">
           <img :src="post.node.image" class="img-fluid" />
           <div class="date tiledesc">
@@ -39,10 +43,10 @@
       </div>
     </div>
     <center>
-<!--       <Pager :info="$page.posts.pageInfo" class="paginations" /> -->
+      <!--       <Pager :info="$page.posts.pageInfo" class="paginations" /> -->
     </center>
 
-      <!-- <article>
+    <!-- <article>
     <h1>Posts tagged {{ $page.tag.title }}</h1>
 
     <ul>
@@ -54,9 +58,6 @@
       </li>
     </ul>
   </article> -->
-
-
-
   </div>
 </template>
 
@@ -88,13 +89,6 @@ query Tag ($id: ID!, $page: Int) {
   }
 }
 </page-query>
-
-
-
-
-
-
-
 
 <script>
 //import { Pager } from "gridsome";
@@ -195,7 +189,6 @@ div.scrollmenu a:hover {
   color: var(--lightest-slate);
   text-decoration: none;
 }
-
 
 .tiledesc {
   color: var(--light-slate);

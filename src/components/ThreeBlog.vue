@@ -1,43 +1,79 @@
 <template>
-  <div id="blog">
-    <div class="title">
-      <h2 class="mainTitle">My Recent Writings</h2>
-      <p class="smallText">
-        Checkout my daily thoughts and views on projects building.
+  <div id="blog" class="px-2 py-24">
+    <div
+      class="max-w-2xl mb-10 md:mx-auto sm:text-center lg:max-w-4xl md:mb-12"
+    >
+      <div>
+        <p
+          class="inline-block px-3 py-0.5 mb-4 text-xs font-semibold tracking-wider text-black uppercase rounded-full bg-cygreen"
+        >
+          Small Digital Garden
+        </p>
+      </div>
+      <h2
+        class="max-w-lg font-sans text-3xl font-bold leading-none tracking-tight text-slate sm:text-4xl md:mx-auto"
+      >
+        Recent Writings
+      </h2>
+      <hr class="line md:w-1/2 md:mx-auto mt-3 mb-4" />
+      <p
+        class="text-base md:text-lg text-lightest-slate antialiased"
+      >
+        These are the latest 3 writings of mine. I do post a lot about my
+        open-source work.
       </p>
     </div>
 
-    <!-- 			
-			  <article v-for="post in $page.posts.edges" :key="post.id" >
-			    <h2><g-link :to="post.node.path" rel="bookmark">{{ post.node.title }}</g-link></h2>
-			    <p>Posted on <time :datetime="post.node.date">{{ post.node.date }}</time></p>
+    <section class="text-gray-400 body-font">
+      <div class="container py-5 mx-auto">
+        <div class="flex flex-wrap -m-4">
+          <div
+            class="p-4 md:w-1/3"
+            v-for="post in $static.posts.edges"
+            :key="post.id"
+          >
+            <div
+              class="bg-light-navy h-full border-2 border-gray-800 rounded-lg overflow-hidden"
+            >
+              <g-image
+                class="lg:h-48 md:h-36 w-full object-cover object-center"
+                :src="post.node.image"
+                width="720px"
+                height="400px"
 
-			    <p>{{ post.node.summary }}</p>
-			  </article>
-
- -->
-    <div class="row">
-      <div class="col-md-4" v-for="post in $static.posts.edges" :key="post.id">
-        <g-link :to="post.node.path" style=
-        "text-decoration:none;">
-        <div class="tile">
-          <div class="image">
-            <img :src="post.node.image" class="img-fluid" />
-          </div>
-
-          <div class="tileText">
-            <g-link :to="post.node.path" rel="bookmark" class="tileTextStyle">{{
-              post.node.title
-            }}</g-link>
-          </div>
-
-          <div class="tiledesc">
-            {{ post.node.summary }}
+                alt="blog"
+              />
+              <div class="p-6">
+                <h1 class="title-font text-lg font-medium text-white mb-3">
+                  <g-link :to="post.node.path">
+                    {{ post.node.title }}
+                  </g-link>
+                </h1>
+                <p class="leading-relaxed">{{ post.node.summary }}</p>
+                <a
+                  class="text-indigo-400 inline-flex items-center my-2"
+                  :href="post.node.path"
+                >
+                  Read More.
+                  <svg
+                    class="w-4 h-4 ml-2"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12h14"></path>
+                    <path d="M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </g-link>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 
@@ -68,104 +104,7 @@ export default {
   name: "Projects",
 
   data() {
-    return {
-      hello: "dfs",
-    };
+    return {};
   },
 };
 </script>
-
-<style lang="css" scoped>
-#blog {
-  padding-top: var(--section-space);
-  padding-bottom: var(--section-space);
-}
-.img-fluid {
-  display: block;
-  max-width: 100%;
-  width: 100%;
-  height: 180px;
-  background-size: cover;
-}
-
-.mainTitle {
-  color: var(--lightest-slate);
-  font-size: var(--section-heading-font-size);
-  font-family: var(--font-sans);
-}
-
-.smallText {
-  color: cyan;
-  margin-top: -25px;
-}
-
-.title {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-}
-
-.tile {
-  background: var(--light-navy);
-  margin: 5px 5px;
-  padding-bottom: 20px;
-  box-shadow: 0 10px 30px -15px var(--navy-shadow);
-  border-radius: 7px;
-}
-
-.tileText {
-  color: var(--lightest-slate);
-  margin-top: 10px;
-  font-size: 18px;
-  text-style: none;
-  font-weight: bolder;
-  padding: 0px 20px;
-  text-decoration: none;
-}
-
-.tileTextStyle {
-  color: cyan;
-  color: var(--lightest-slate);
-  text-decoration: none;
-}
-
-.tiledesc {
-  color: var(--light-slate);
-  font-size: 14px;
-  margin-top: 2px;
-  padding: 0px 20px;
-}
-
-.image {
-  position: relative;
-  width: 100%;
-  text-align: center;
-  margin: auto;
-  display: block;
-}
-
-.image img {
-  width: 100%;
-  vertical-align: middle;
-}
-
-.image:after {
-  content: "\A";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: #00ffff50;
-  opacity: 100%;
-  transition: all 1s;
-  -webkit-transition: all 1s;
-}
-.image:hover:after {
-  opacity: 0%;
-}
-
-
-</style>

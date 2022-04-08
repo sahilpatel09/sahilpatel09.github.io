@@ -1,0 +1,8 @@
+# Enable text compression
+<IfModule mod_deflate.c>
+	AddOutputFilterByType DEFLATE text/html
+	AddOutputFilterByType DEFLATE application/javascript
+	AddOutputFilterByType DEFLATE text/css
+	AddOutputFilterByType DEFLATE image/png
+</IfModule>
+

@@ -40,7 +40,6 @@
                 :src="post.node.image"
                 width="720px"
                 height="400px"
-
                 alt="blog"
               />
               <div class="p-6">

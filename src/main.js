@@ -2,8 +2,8 @@
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
 import DefaultLayout from "~/layouts/Default.vue";
-//import "~/assets/css/prism.css";
 import "~/assets/css/tail.css";
+import "~/assets/css/markdown.css";
 import "gridsome-plugin-remark-prismjs-all/themes/night-owl.css";
 
 

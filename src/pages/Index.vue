@@ -32,39 +32,6 @@ export default {
     title: "Sahil Patel, Full Stack Web Developer",
     description: "Welcome to my small website. I do share my work and learning here.",
 
-    meta: [
-          {
-            key: 'og:title',
-            name: 'og:title',
-            content: 'Sahil Patel - Full Stack Web Developer',
-          },
-          {
-            key: 'og:url',
-            name: 'og:url',
-            content: 'https://sahilpatel09.github.io',
-          },
-          {
-            key: 'og:og:description',
-            name: 'og:og:description',
-            content: 'Welcome to my small website. I do share my work and learning here.',
-          },
-          {
-            key: 'og:image',
-            name: 'og:og:image',
-            content: require('@/assets/sahilpatel.png'),
-          },
-          
-
-          {
-            key: 'twitter:title',
-            name: 'twitter:title',
-            content: 'timdeschryver.dev - posts',
-          },
-        ]
-
-
-
-
   },
   components: {
     Work,

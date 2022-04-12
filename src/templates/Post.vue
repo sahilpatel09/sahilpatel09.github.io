@@ -5,7 +5,7 @@
 
 
     <div class="px-2 py-10 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-3xl md:px-24 lg:px-8 lg:pt-20">
-  <div class="max-w-3xl mb-5 md:mx-auto sm:text-center lg:max-w-3xl">
+  <div class="max-w-3xl mb-5 md:mx-auto sm:text-center lg:max-w-4xl">
     <div>
       <p class="inline-block mb-2 text-xl font-semibold tracking-wider text-gray-400">
         {{ $page.post.date }} |           <span class="text-slate ">Tags:</span>
@@ -23,17 +23,17 @@
         {{ $page.post.title }}
     </h2>
 
-<p class="text-base md:text-lg text-lightest-slate max-w-xl mx-auto">
+<p class="text-base md:text-lg text-lightest-slate max-w-2xl py-2 mx-auto">
       {{ $page.post.summary }}
     </p>
   </div>
           <div class="flex max-w-lg mx-auto px-5 py-2 overflow-hidden bg-light-navy rounded-lg shadow-lg md:hidden">
             <img class="object-cover w-20 mx-auto rounded-full m-3" src="@/assets/small_me.jpg" alt="avatar">
             
-            <div class="flex flex-col items-start px-3 py-3">
+            <div class="flex flex-col justify-center items-center px-3 py-3">
 
 
-                <h1 class="mx-3 text-lg font-semibold bg-light-navy text-center mx-auto text-white">Sahil Patel</h1>
+                <h1 class="mx-3 text-lg font-semibold bg-light-navy text-white">Sahil Patel</h1>
                 <p class="text-center text-gray-400">Full Stack Developer, UI / UX Designer , and lifelong learner.</p>
 
             </div>
@@ -51,11 +51,13 @@
         <div class="hidden md:block flex max-w-full mx-auto px-5 py-2 overflow-hidden bg-light-navy rounded-lg shadow-lg">
             <img class="object-cover w-20 mx-auto rounded-full m-3" src="@/assets/small_me.jpg" alt="avatar">
             
-            <div class="flex flex-col items-start px-3 py-3">
+            <div class="flex flex-col items-center px-3 py-3">
 
 
-                <h1 class="mx-3 text-lg font-semibold bg-light-navy text-center mx-auto text-white">Sahil Patel</h1>
+                <h1 class="author mx-3 text-lg font-semibold bg-light-navy text-center mx-auto text-white">                Sahil Patel</h1>
+
                 <p class="text-center text-gray-400">Full Stack Developer, UI / UX Designer , and lifelong learner.</p>
+
 
             </div>
 
@@ -75,10 +77,10 @@
 
   </div>
 
-  <div class="w-full md:w-2/3 h-auto bg-light-navy shadow-lg pb-7">
+  <div class="w-full md:w-2/3 h-auto md:bg-light-navy shadow-lg pb-7">
     <img :src="$page.post.image" class="w-full object-cover pb-5" />
             <div
-              class="markdown-body mb-8 px-6"
+              class="markdown-body mb-8 md:px-6 px-2"
               id="article-area"
               v-html="$page.post.content"
             />
@@ -187,6 +189,9 @@ export default {
 </script>
 
 <style>
+.author {
+  text-align: center;
+}
 .gridsome-code-title {
   position: relative;
   z-index: 100;

@@ -2,13 +2,21 @@
 title: "Dynamic Gradient Generator Built using React.js"
 path: /gradient-generator-built-using-react-js
 date: 2022-04-11
-summary: "The web app generates dynamic gradients. You can change direction of the colors. Add the color names in the input boxes, press enter and when you are done just copy the CSS code and paste in your project. "
+summary: "The web app generates dynamic gradients. You can change direction of the colors. "
 image: "https://gradient-generator-react.netlify.app/readme-image.png"
 tags: ['React.js', 'Tailwindcss' ]
 ---
 
 A gradient generator seems fun. I do mostly use mycolors.space website to generate gradient in different formats. In the weekend I decided to make my own gradient generator and I have made a similar clone of mycolors.space. Take a look at the demo here.
 
+You can find the source code of the project here and the live demo here.
+
+[![License](https://img.shields.io/badge/Live--demo-blue.svg)](https://gradient-generator-react.netlify.app/)
+
+<a href='https://github.com/sahilpatel09/Gradient-Generator-using-React.js' target="_blank"><img alt='GitHub' src='https://img.shields.io/badge/Source_Code-100000?style=for-the-badge&logo=GitHub&logoColor=white&labelColor=black&color=black'/></a>
+
+
+[button url="http://www.google.com"]
 
 The Gradient generator has options for changing the direction and the colors.  It takes to parameters of colors and generates 3 most related colors between them. 
 

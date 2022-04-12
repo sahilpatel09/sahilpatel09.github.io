@@ -38,7 +38,7 @@
               <h2
                 class="tracking-widest text-xs title-font font-medium text-gray-500 mb-1"
               >
-                Web Development
+                {{ post.node.category }}
               </h2>
 
               <h1
@@ -97,7 +97,7 @@
 </template>
 <static-query>
 query Projects ($page: Int) {
-  posts: allProject (sortBy: "date", order: DESC,limit:3, perPage: 10, page: $page) @paginate {
+  posts: allProject (sortBy: "date", order: DESC, perPage: 10, page: $page) @paginate {
     totalCount
     pageInfo {
       totalPages

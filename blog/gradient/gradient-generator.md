@@ -7,7 +7,7 @@ image: "https://gradient-generator-react.netlify.app/readme-image.png"
 tags: ['React.js', 'Tailwindcss' ]
 ---
 
-A gradient generator seems fun. I do mostly use mycolors.space website to generate gradient in different formats. In the weekend I decided to make my own gradient generator and I have made a similar clone of mycolors.space. Take a look at the demo here.
+A gradient generator seems fun. I do mostly use mycolor.space website to generate gradient in different formats. In the weekend I decided to make my own gradient generator and I have made a similar clone of mycolor.space. Take a look at the demo here.
 
 You can find the source code of the project here and the live demo here.
 
@@ -15,8 +15,6 @@ You can find the source code of the project here and the live demo here.
 
 <a href='https://github.com/sahilpatel09/Gradient-Generator-using-React.js' target="_blank"><img alt='GitHub' src='https://img.shields.io/badge/Source_Code-100000?style=for-the-badge&logo=GitHub&logoColor=white&labelColor=black&color=black'/></a>
 
-
-[button url="http://www.google.com"]
 
 The Gradient generator has options for changing the direction and the colors.  It takes to parameters of colors and generates 3 most related colors between them. 
 
@@ -28,10 +26,9 @@ npx create-react-app color-generator-react
 cd color-generator-react
 ```
 
-Now, cd into the project, add the only dependancy which is Chroma-js.
+Now, cd into the project, add the only dependency which is Chroma-js.
 
 ```bash
-
 yarn add chroma-js
 OR
 npm install chroma-js
@@ -67,15 +64,14 @@ In the created <code>tailwind.css</code> file, add the below tailwindcss directi
 @tailwind utilities;
 ```
 
-Congrats, Tailwindcss is sucessfully added to the project.
+Congrats, Tailwindcss is successfully added to the project.
 
 Once the tailwindcss is added we can go ahead and start working on the project. But before that, let us have a little introduction of chroma-js.
 
 ## Introduction to Chroma-js
 Chroma-js is just an amazing piece of software when it comes to color manipulation, conversion and scaling. It has everything you need for every sort of manipulation from darkening or brightening to hue manipulation. It also gives you results in different color spaces. It can read, convert, analyze and manipulate colors from and to different formats.
 
-We are going to use Chroma-js to generate 3 more colors from the actual given 2 parameters and create a gradient of 5 colors. Why are we doing it? Because if we use 2 colors only there is a sudden change of color in the /
-
+We are going to use Chroma-js to generate 3 more colors from the actual given 2 parameters and create a gradient of 5 colors.
 
 ## Let us Build the Layout
 
@@ -132,7 +128,7 @@ To create the controls to change the direction of the color spread, add the belo
 
 ```
 
-To make some of them rotate, add this css in <code>App.css</code> file.
+To make some of them rotate, add this CSS in <code>App.css</code> file.
 
 ```CSS
 .rotate-135 {
@@ -215,7 +211,7 @@ Let us now add 2 buttons to take the color inputs from the user and a little CSS
 }
 ```
 
-It should look like this once add the markup and css. Now at this moment, we have finished building the basic layout for the app.
+It should look like this once add the markup and CSS. Now at this moment, we have finished building the basic layout for the app.
 
 ![markup-complete-tutorial](./image2.png)
 

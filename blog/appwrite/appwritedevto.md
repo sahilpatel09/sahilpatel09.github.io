@@ -71,7 +71,7 @@ Fill up the details based on your needs. Below is my configuration.
 
 * Choose the Virtual Machine Name - appwrite
 * Choose the region - Canada (Canada Central) - It should be the nearest
-* Availability Options - No infrastucture redundancy required
+* Availability Options - No infrastructure redundancy required
 * Security - Standard
 * Image: Ubuntu Server 20.04 LTS - Gen2
 * Azure Spot - Unchecked
@@ -86,7 +86,7 @@ Fill up the details based on your needs. Below is my configuration.
 	* Download and Install Putty
 	* Add the IP address copied and click <code>Open</code>.
 	* Putty will prompt for credentials. Enter credentials and click enter.
-	* If everything would be okay so far then you will be logged into the instace with sudo permissions.
+	* If everything would be okay so far then you will be logged into the instance with sudo permissions.
 	
 
 ![Putty Image](./puttydeploy.png)
@@ -133,7 +133,7 @@ docker: Got permission denied while trying to connect to the Docker daemon socke
 See 'docker run --help'.
 ```
 
-Run these command and then run the installation command again. For more details on these commands, check out [this](https://stackoverflow.com/questions/48957195/how-to-fix-docker-got-permission-denied-issue) stackoverflow question.
+Run these command and then run the installation command again. For more details on these commands, check out [this](https://stackoverflow.com/questions/48957195/how-to-fix-docker-got-permission-denied-issue) stack overflow question.
 
 ```bash
 $ sudo groupadd docker
@@ -144,16 +144,16 @@ docker run hello-world # if docker runs the hello-world image then you are good 
 
 Run the installation command again and there should be no problems.
 
-Once Docker has successfully pulled the  image from the hub it will ask some of the questoions, which are as below :
+Once Docker has successfully pulled the  image from the hub it will ask some of the questions, which are as below :
 
 1. Choose your server HTTP port: (default: 80)
-Ans: Keep it defualt 
+Ans: Keep it default.
 
 2. Choose your server HTTPS port: (default: 443)
-Ans: Keep it defualt 
+Ans: Keep it default.
 
 3. Choose a secret API key, make sure to make a backup of your key in a secure location (default: 'your-secret-key')
-Ans: Keep it defualt
+Ans: Keep it default.
 
 4. Enter your Appwrite hostname (default: 'localhost')
 Ans: Enter the public IP address of your VM instance
@@ -162,7 +162,7 @@ Ans: Enter the public IP address of your VM instance
 You can use the same value as used for the Appwrite hostname. (default: 'localhost')
 Ans:  Again, Enter the public IP address of your VM instance
 
-Once you click ol, it will run <code>docker-compose</code> and set up the config for appwrite,
+Once you click ok, it will run <code>docker-compose</code> and set up the config for appwrite,
 
 ![Success Message](./deployed.png)
 

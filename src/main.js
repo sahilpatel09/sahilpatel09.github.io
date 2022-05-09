@@ -6,7 +6,6 @@ import "~/assets/css/tail.css";
 import "~/assets/css/markdown.css";
 import "gridsome-plugin-remark-prismjs-all/themes/night-owl.css";
 
-
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);

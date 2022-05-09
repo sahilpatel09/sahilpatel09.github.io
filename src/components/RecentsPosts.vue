@@ -15,7 +15,7 @@
         <a :href="post.node.path" class="text-indigo-500">Read more.</a>
       </div>
 
-<!--       <img class="object-cover w-full h-48 mt-2" :src="post.node.image" /> -->
+      <!--       <img class="object-cover w-full h-48 mt-2" :src="post.node.image" /> -->
     </div>
   </div>
 </template>

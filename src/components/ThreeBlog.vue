@@ -16,9 +16,7 @@
         Recent Writings
       </h2>
       <hr class="line md:w-1/2 md:mx-auto mt-3 mb-4" />
-      <p
-        class="text-base md:text-lg text-lightest-slate antialiased"
-      >
+      <p class="text-base md:text-lg text-lightest-slate antialiased">
         These are the latest 3 writings of mine. I do post a lot about my
         open-source work.
       </p>

@@ -1,155 +1,104 @@
 <template>
   <div class="container mx-auto">
+    <BlogMenu />
 
-    <BlogMenu/>
-
-
-    <div class="px-2 py-10 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-3xl md:px-24 lg:px-8 lg:pt-20">
-  <div class="max-w-3xl mb-5 md:mx-auto sm:text-center lg:max-w-4xl">
-    <div>
-      <p class="inline-block mb-2 text-xl font-semibold tracking-wider text-gray-400">
-        {{ $page.post.date }} |           <span class="text-slate ">Tags:</span>
-          <g-link
-            class="text-lightest-slate"
-            v-for="tag in $page.post.tags"
-            :to="tag.path"
-            :key="tag.id"
+    <div
+      class="px-2 py-10 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-3xl md:px-24 lg:px-8 lg:pt-20"
+    >
+      <div class="max-w-3xl mb-5 md:mx-auto sm:text-center lg:max-w-4xl">
+        <div>
+          <p
+            class="inline-block mb-2 text-xl font-semibold tracking-wider text-gray-400"
           >
-            #{{ tag.title }},
-          </g-link>
-      </p>
-    </div>
-    <h2 class="max-w-full font-sans text-4xl font-bold leading-none tracking-tight sm:text-6xl md:mx-auto text-slate text-lightest-slate">
-        {{ $page.post.title }}
-    </h2>
-
-<p class="text-base md:text-lg text-lightest-slate max-w-2xl py-2 mx-auto">
-      {{ $page.post.summary }}
-    </p>
-  </div>
-          <div class="flex max-w-lg mx-auto px-5 py-2 overflow-hidden bg-light-navy rounded-lg shadow-lg md:hidden">
-            <img class="object-cover w-20 mx-auto rounded-full m-3" src="@/assets/small_me.jpg" alt="avatar">
-            
-            <div class="flex flex-col justify-center items-center px-3 py-3">
-
-
-                <h1 class="mx-3 text-lg font-semibold bg-light-navy text-white">Sahil Patel</h1>
-                <p class="text-center text-gray-400">Full Stack Developer, UI / UX Designer , and lifelong learner.</p>
-
-            </div>
-
+            {{ $page.post.date }} | <span class="text-slate">Tags:</span>
+            <g-link
+              class="text-lightest-slate"
+              v-for="tag in $page.post.tags"
+              :to="tag.path"
+              :key="tag.id"
+            >
+              #{{ tag.title }},
+            </g-link>
+          </p>
         </div>
+        <h2
+          class="max-w-full font-sans text-4xl font-bold leading-none tracking-tight sm:text-6xl md:mx-auto text-slate text-lightest-slate"
+        >
+          {{ $page.post.title }}
+        </h2>
 
-<!--   <img :src="$page.post.image" class="postImage" /> -->
-</div>
+        <p
+          class="text-base md:text-lg text-lightest-slate max-w-2xl py-2 mx-auto"
+        >
+          {{ $page.post.summary }}
+        </p>
+      </div>
+      <div
+        class="flex max-w-lg mx-auto px-5 py-2 overflow-hidden bg-light-navy rounded-lg shadow-lg md:hidden"
+      >
+        <img
+          class="object-cover w-20 mx-auto rounded-full m-3"
+          src="@/assets/small_me.jpg"
+          alt="avatar"
+        />
 
-
-<div class="flex md:flex-wrap flex-col gap-4 mx-auto flex-col-reverse md:flex-row md:flex-nowrap">
-  <div class="w-full md:w-96 h-auto z-10">
-   
-
-        <div class="hidden md:block flex max-w-full mx-auto px-5 py-2 overflow-hidden bg-light-navy rounded-lg shadow-lg">
-            <img class="object-cover w-20 mx-auto rounded-full m-3" src="@/assets/small_me.jpg" alt="avatar">
-            
-            <div class="flex flex-col items-center px-3 py-3">
-
-
-                <h1 class="author mx-3 text-lg font-semibold bg-light-navy text-center mx-auto text-white">                Sahil Patel</h1>
-
-                <p class="text-center text-gray-400">Full Stack Developer, UI / UX Designer , and lifelong learner.</p>
-
-
-            </div>
-
+        <div class="flex flex-col justify-center items-center px-3 py-3">
+          <h1 class="mx-3 text-lg font-semibold bg-light-navy text-white">
+            Sahil Patel
+          </h1>
+          <p class="text-center text-gray-400">
+            Full Stack Developer, UI / UX Designer , and lifelong learner.
+          </p>
         </div>
-
-
-
-
-
-        <div class="w-full mt-6 pl-1  rounded bg-navy shadow-2xl">
-          <h2 class="text-3xl py-2 text-gray-400">Recent Posts</h2>
-        </div>
-    <Recents />
-
-
-
-
-  </div>
-
-  <div class="w-full md:w-2/3 h-auto md:bg-light-navy shadow-lg pb-7">
-    <img :src="$page.post.image" class="w-full object-cover pb-5" />
-            <div
-              class="markdown-body mb-8 md:px-6 px-2"
-              id="article-area"
-              v-html="$page.post.content"
-            />
       </div>
 
+      <!--   <img :src="$page.post.image" class="postImage" /> -->
+    </div>
+
+    <div
+      class="flex md:flex-wrap flex-col gap-4 mx-auto flex-col-reverse md:flex-row md:flex-nowrap"
+    >
+      <div class="w-full md:w-96 h-auto z-10">
+        <div
+          class="hidden md:block flex max-w-full mx-auto px-5 py-2 overflow-hidden bg-light-navy rounded-lg shadow-lg"
+        >
+          <img
+            class="object-cover w-20 mx-auto rounded-full m-3"
+            src="@/assets/small_me.jpg"
+            alt="avatar"
+          />
+
+          <div class="flex flex-col items-center px-3 py-3">
+            <h1
+              class="author mx-3 text-lg font-semibold bg-light-navy text-center mx-auto text-white"
+            >
+              Sahil Patel
+            </h1>
+
+            <p class="text-center text-gray-400">
+              Full Stack Developer, UI / UX Designer , and lifelong learner.
+            </p>
+          </div>
+        </div>
+
+        <div class="w-full mt-6 pl-1 rounded bg-navy shadow-2xl">
+          <h2 class="text-3xl py-2 text-gray-400">Recent Posts</h2>
+        </div>
+        <Recents />
+      </div>
+
+      <div class="w-full md:w-2/3 h-auto md:bg-light-navy shadow-lg pb-7">
+        <img :src="$page.post.image" class="w-full object-cover pb-5" />
+        <div
+          class="markdown-body mb-8 md:px-6 px-2"
+          id="article-area"
+          v-html="$page.post.content"
+        />
+      </div>
+    </div>
+
+    <Footer />
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <Footer />
-
-</div>
-
-
-
-
-
-
 </template>
 
 <page-query>
@@ -168,17 +117,16 @@ query Post ($path: String!) {
 }
 </page-query>
 
-
-
 <script>
 import BlogMenu from "~/components/BlogBar.vue";
-import Recents from '~/components/RecentsPosts.vue'
-import Footer from '~/components/Footer.vue'
+import Recents from "~/components/RecentsPosts.vue";
+import Footer from "~/components/Footer.vue";
 
 export default {
   components: {
-    BlogMenu,Recents,Footer
-
+    BlogMenu,
+    Recents,
+    Footer,
   },
   metaInfo() {
     return {
@@ -201,7 +149,8 @@ export default {
   font-style: italic;
   font-weight: 800;
   text-align: left;
-  font-family: PT Mono, Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-family: PT Mono, Consolas, Monaco, "Andale Mono", "Ubuntu Mono",
+    monospace;
   line-height: 1.5;
   border-top-left-radius: 0.3em;
   border-top-right-radius: 0.3em;
@@ -212,12 +161,7 @@ export default {
   color: var(--light-slate);
   text-align: right;
   text-transform: uppercase;
-
-  
-
-
 }
-
 
 ::-webkit-scrollbar {
   height: 4px;
@@ -234,16 +178,6 @@ export default {
   border-radius: 10px;
   background: var(--lightest-navy);
 }
-
-
-
-
-
-
-
-
-
-
 
 @media (prefers-color-scheme: dark) {
   .markdown-body {
@@ -1285,10 +1219,4 @@ export default {
 .markdown-body ::-webkit-calendar-picker-indicator {
   filter: invert(50%);
 }
-
-
-
-
-
-
 </style>

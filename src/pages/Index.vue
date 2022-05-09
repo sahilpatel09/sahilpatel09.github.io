@@ -30,8 +30,8 @@ import Contact from "../components/Contact.vue";
 export default {
   metaInfo: {
     title: "Sahil Patel, Full Stack Web Developer",
-    description: "Welcome to my small website. I do share my work and learning here.",
-
+    description:
+      "Welcome to my small website. I do share my work and learning here.",
   },
   components: {
     Work,

@@ -70,12 +70,15 @@
               </button>
             </div>
 
-            <g-image src="@/assets/couch.png" class="mx-5 mt-4 md:mx-12 md:mt-10" alt="Chilling Software developer" />
-            
+            <g-image
+              src="@/assets/couch.png"
+              class="mx-5 mt-4 md:mx-12 md:mt-10"
+              alt="Chilling Software developer"
+            />
+
             <div
               class="p-2 w-full pt-8 mt-8 border-t border-gray-600 text-center"
             >
-
               <center>
                 <div class="footerCopyright">
                   <p>

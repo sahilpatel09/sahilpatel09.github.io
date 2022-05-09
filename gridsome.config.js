@@ -20,7 +20,6 @@ module.exports = {
             typeName: "Tag",
             create: true,
           },
-          
         },
       },
     },
@@ -44,15 +43,15 @@ module.exports = {
       use: "gridsome-plugin-htaccess",
       options: {
         textCompression: [
-        "text/html",
-        "application/javascript",
-        "text/css",
-        "image/png",
+          "text/html",
+          "application/javascript",
+          "text/css",
+          "image/png",
         ],
       },
       fileExpirations: {
-          default: "access plus 1 month",
-        },
+        default: "access plus 1 month",
+      },
     },
 
     //tailwindcss config
@@ -74,9 +73,7 @@ module.exports = {
       externalLinksTarget: "_blank",
       externalLinksRel: ["noopener"],
       anchorClassName: "icon icon-link",
-      plugins: [
-        'gridsome-plugin-remark-prismjs-all',
-      ],
+      plugins: ["gridsome-plugin-remark-prismjs-all"],
     },
   },
 };

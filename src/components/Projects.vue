@@ -18,9 +18,7 @@
             Noteworthy Projects
           </h2>
           <hr class="line md:w-1/2 md:mx-auto mt-3 mb-4" />
-          <p
-            class="text-base md:text-lg text-lightest-slate antialiased"
-          >
+          <p class="text-base md:text-lg text-lightest-slate antialiased">
             I work on various project, here is the list of all the projects that
             I have worked with.
           </p>

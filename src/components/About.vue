@@ -20,10 +20,8 @@
             Let's Talk About Me
           </h2>
           <hr class="line md:w-1/2 md:mx-auto mt-3 mb-4" />
-          <p
-            class="text-base md:text-lg text-lightest-slate antialiased"
-          >
-            Hello! This is Sahil, from Ahmedabad. I am a web developer and a
+          <p class="text-base md:text-lg text-lightest-slate antialiased">
+            Hello! This is Sahil, from Montreal. I am a web developer and a
             poet. I am a creative, time punctual, dedicated, goal-oriented
             individual with decent moral Values and Ethicates along with a
             high-energy level, honed communication skills, strong organizational
@@ -37,7 +35,7 @@
             alt="working-on-desk"
           />
         </div>
-        <p class="max-w-4xl mb-4 text-base text-lightest-slate sm:mx-auto">
+        <!-- <p class="max-w-4xl mb-4 text-base text-lightest-slate sm:mx-auto">
           I have a double diploma, in Software Engineering and Software Testing.
           It gives me strength knowing SDLCs in developement as well as
           different methodologies in testing like Agile. I had started my career
@@ -49,7 +47,7 @@
           Github. Most of my work is in WordPress sites, so building better
           portfolio on Github. I like to read books and also write poetry on
           Medium.
-        </p>
+        </p> -->
       </div>
     </div>
   </div>

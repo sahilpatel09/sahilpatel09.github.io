@@ -83,9 +83,9 @@
             >
           </li>
 
-
           <li class="">
-            <a class="inline-flex items-center justify-center py-2 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-green-700 hover:bg-green-600 focus:shadow-outline focus:outline-none hover:text-white"
+            <a
+              class="inline-flex items-center justify-center py-2 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-green-700 hover:bg-green-600 focus:shadow-outline focus:outline-none hover:text-white"
               href="https://drive.google.com/file/d/1TZSQu_c0VFeZvrwy8excuGryqaB-d-E9/view?usp=sharing"
               target="_blank"
               >Resume</a
@@ -162,7 +162,6 @@ button:focus {
   border: 0;
 }
 
-
 .menu {
   list-style-type: none;
 }
@@ -191,8 +190,6 @@ button:focus {
   color: cyan;
   transition: all 1s ease;
 }
-
-
 
 .toggle {
   display: none;

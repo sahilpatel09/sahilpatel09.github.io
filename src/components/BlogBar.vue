@@ -62,7 +62,7 @@
           >
         </li>
 
-        <li class="specialButton"><a href="/resume.pdf">Resume</a></li>
+        <li class="specialButton"><a href="https://drive.google.com/file/d/12IvNtpyO7xXaKlzkv66rotgJRlP1MLAe/view?usp=sharing">Resume</a></li>
       </ul>
     </div>
   </div>

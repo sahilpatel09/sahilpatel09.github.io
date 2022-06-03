@@ -3,11 +3,10 @@
     <BlogMenu />
 
     <div class="row scrollmenu">
-      <a href="#home">Vue.js</a>
-      <a href="#news">Node.js</a>
-      <a href="#contact">Netlify</a>
-      <a href="#about">WordPress</a>
-      <a href="#support">Support</a>
+      <a href="tag/Tailwindcss">Tailwindcss</a>
+      <a href="tag/Design">Design</a>
+      <a href="tag/Nuxt3">Nuxt3</a>
+
     </div>
 
     <div class="row">
@@ -138,12 +137,17 @@ query Posts ($page: Int) {
         date (format: "MMMM D, Y")
         summary
         image
+        tags {
+          title
+          path
+        }
         path
       }
     }
   }
 }
 </page-query>
+
 
 <script>
 import { Pager } from "gridsome";
@@ -156,6 +160,11 @@ export default {
   metaInfo: {
     title: "View my blog posts",
   },
+  computed:{
+      seperateTags(){
+
+      }
+  }
 };
 </script>
 

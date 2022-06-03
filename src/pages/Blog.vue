@@ -13,7 +13,7 @@
       <div class="col-12 tron">
         <h1 class="blogTitle font-mono">Writing</h1>
         <p class="blogDescription text-center text-base md:text-2xl">
-          So far I’ve written 8 longform tutorials & articles. For more compact
+          So far I’ve written 6 longform tutorials & articles. For more compact
           content visit my Digital Garden. RSS.
         </p>
       </div>

@@ -1,7 +1,7 @@
 ---
 path: /gradient-generator
 category: "Web | React.js"
-title: "Gradient Generator"
+title: "Gradient Generator Built using React.js & Chroma.js"
 summary: "The web app generates dynamic gradients. You can change direction of the colors."
 gitlink: "https://github.com/sahilpatel09/Gradient-Generator-using-React.js"
 liveurl: "https://gradient-generator-react.netlify.app/"

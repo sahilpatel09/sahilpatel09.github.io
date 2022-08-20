@@ -6,6 +6,7 @@
         <div>
           <Hero />
           <About />
+<!--           <Experience /> -->
           <Featured />
           <Projects />
           <BlogSection />
@@ -24,7 +25,7 @@ import About from "../components/About.vue";
 import Featured from "../components/Featured.vue";
 import Projects from "../components/Projects.vue";
 import BlogSection from "../components/ThreeBlog.vue";
-
+import Experience from "../components/Experience.vue";
 import Contact from "../components/Contact.vue";
 
 export default {
@@ -42,6 +43,7 @@ export default {
     Projects,
     BlogSection,
     Contact,
+    Experience
   },
 };
 </script>

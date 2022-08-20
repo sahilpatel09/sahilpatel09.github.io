@@ -18,6 +18,8 @@
 </template>
 
 <script>
+import {GraphQLClient} from 'graphql-request';
+
 import Work from "../components/Maintenance.vue";
 import Bar from "../components/Bar.vue";
 import Hero from "../components/Hero.vue";
@@ -33,6 +35,11 @@ export default {
     title: "Sahil Patel, Full Stack Web Developer",
     description:
       "Welcome to my small website. I do share my work and learning here.",
+  },
+  async mounted() {
+    const client = new GraphQLClient('https://leetcode.com/graphql');
+    const countries = await client.request('{ countries { name } }');
+    console.log(countries);
   },
   components: {
     Work,

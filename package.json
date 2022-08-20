@@ -14,6 +14,7 @@
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.4",
     "gh-pages": "^3.2.3",
+    "graphql-request": "^4.3.0",
     "gridsome": "^0.7.0",
     "gridsome-plugin-remark-prismjs-all": "^0.4.8",
     "gridsome-plugin-seo": "^1.0.2"

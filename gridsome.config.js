@@ -40,6 +40,21 @@ module.exports = {
     },
 
     {
+      use: "@gridsome/source-filesystem",
+      options: {
+        path: "content/problems/**/*.md",
+        typeName: "Problem",
+
+        refs: {
+          tags: {
+            typeName: "Tag",
+            create: true,
+          },
+        },
+      },
+    },
+
+    {
       use: "gridsome-plugin-htaccess",
       options: {
         textCompression: [
@@ -66,6 +81,7 @@ module.exports = {
     Tag: "/tag/:id",
     Post: "/blog/:path",
     Project: "/project/:path",
+    Problem: "/code/problem/:path"
   },
   transformers: {
     remark: {
